@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鑿╂彁鑻� 路  涓哄�朵汉绁堢�忔眰鐏电��</title>
+  <link rel="stylesheet" href="css/style.css">
+  <text y='.9em' font-size='90'>閳�?/text></svg>">
+  <script src="js/lunar.min.js"></script>
+  <script src="js/lunar-wrapper.js"></script>
+</head>
+<body>
+
+<div class="smoke-container"></div>
+
+<!-- ====== Banner ====== -->
+<header class="banner">
+  <div class="banner-left">
+    <a href="/" class="banner-logo" onclick="navigate('home')">閼库晜褰�<span>閼�?/span></a>
+    <button class="nav-toggle" onclick="toggleNav()">閳�?/button>
+  </div>
+  <nav class="banner-nav" id="mainNav">
+    <a href="#wish" onclick="navigate('wish')">涓哄�朵汉绁堢��?/a>
+    <a href="#calendar" onclick="navigate('calendar')">娴犲﹥妫╂�涘嫬宸�</a>
+    <a href="#divination" onclick="navigate('divination')">姹傜伒绛�/a>
+    <a href="#bazi" onclick="navigate('bazi')">閸忣偄鐡х划鐐�澹�</a>
+    <a href="#dreams" onclick="navigate('dreams')">閸涖劌鍙曠憴锝嗏叺</a>
+    <a href="#palm" onclick="navigate('palm')">閹靛��娴� / 闂堛垻娴�</a>
+    <a href="#naming" onclick="navigate('naming')">鐎规繂鐤傜挧宄版倳</a>
+    <a href="#iching" onclick="navigate('iching')">閸忣厾鍩㈤崡鐘插椽</a>
+    <a href="#meditation" onclick="navigate('meditation')">闂堟瑥绺剧粋鍛�娼�</a>
+  </nav>
+  <div class="banner-right">
+    <button class="btn-icon" onclick="toggleMusic()">棣冩晜 缁傚懍鎱ㄩ棅鍏呯��</button>
+    <button class="btn-icon" onclick="alert('閸欘垰鐨㈠�濄倝銆夐棃銏″潑閸旂姾鍤﹀�楀矂娼伴敍灞炬煙娓氭寧妫╃敮闀愬▏閻�銊ｂ偓?)">棣冩懍 濞ｈ�插�為崚鐗堫攽闂�?/button>
+  </div>
+</header>
+
+<main class="main-content">
+
+<!-- ====== HOME ====== -->
+<section class="page-section active" id="page-home">
+  <div class="hero">
+    <h1>鑿╂彁鑻�?/h1>
+    <p>閻�鐔稿笓閻�?璺� 閸欍倗鐫勬稉鐑樺祦 璺� 婢舵岸顥撻弽鑹靶掔拠?/p>
+    <div class="hero-tagline">閳ユ柡鈧�?涓哄�朵汉绁堢��?璺� 姹傜伒绛捐矾 浼犵粺鏂囧寲鍙傝�冮垾鏂衡偓?/div>
+    <div class="hero-cta">
+      <a href="javascript:navigate('wish')" class="btn-hero btn-hero-primary">棣冾�� 韫囧啯鍔规笟娑氫紖</a>
+      <a href="javascript:navigate('bazi')" class="btn-hero btn-hero-secondary">閳�?閸忣偄鐡х划鐐�澹�</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">涔濆ぇ鍠勯棬</h2>
+  <div class="feature-grid">
+    <a class="feature-card" href="javascript:navigate('wish')">
+      <div class="feature-icon">棣冪崲</div>
+      <h3>韫囧啯鍔规笟娑氫紖</h3>
+      <p>閻愰�涚�撮惄蹇曚紖閿涘苯鍟撴稉瀣╃�存禒鐣岊殺閹拌￥鈧�鍌炩偓鍌氭値閻㈢喐妫╃痪顏勫悍閵嗕礁閽╃�瑰�岊殺缁傚繈鈧�浣割劅娑撴艾绺鹃幇瑁も偓?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('calendar')">
+      <div class="feature-icon">棣冩惍</div>
+      <h3>娴犲﹥妫╂�涘嫬宸�</h3>
+      <p>楠炲弶鏁�鐎规粌绻夐妴浣侯殻閻撶偛鍟块悡鐐�鈧�浣稿磩娴滃本妞傛潏甯�绱濇导鐘电埠閹封晛鎮忔稉鈧�閻╊喕绨￠悞韬测偓?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('dreams')">
+      <div class="feature-icon">棣冩寵</div>
+      <h3>閸涖劌鍙曠憴锝嗏叺</h3>
+      <p>閻х偓鈪甸惃鍡樻箒閹板骏绱濋崣銈勭矕閻╃�垮棘鐠囦降鈧�?0 娴ｆ瑦娼�缂佸繐鍚�濮婏箑顣ㄩ敍宀�娲块幒銉ユ啞鐠囧�嬪亶閸氬�婂毄閵�?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('divination')">
+      <div class="feature-icon">棣冨竾</div>
+      <h3>娴肩姷绮虹粵鎹愭皑</h3>
+      <p>娑撯偓缁涘彞绔存禍瀣剁礉100 閺�顖滎劮閺傚洦鏆ｉ悶鍡氬殰娴肩姷绮虹粵鎹愭皑閿涘奔璐熻ぐ鎾冲�犳禍瀣�銆嶉幓鎰�绶甸弬鍥у�查崣鍌濃偓鍐︹偓?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('bazi')">
+      <div class="feature-icon">棣冪崫</div>
+      <h3>閸忣偄鐡х划鐐�澹�</h3>
+      <p>缁斿��妲�閼哄倹鐨甸惇鐔稿笓閻╂﹫绱濋惇瀣�鎳￠弽鍏肩壌妤犮劋绗屾稉鈧�閻㈢喐鐨垫潻鎰�鎹ｆ导蹇嬧偓?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('iching')">
+      <div class="feature-icon">閳�?/div>
+      <h3>閸涖劍妲楅崡锕佽杽</h3>
+      <p>韫囧啳鎹ｆ稉鈧�韫囩�夌礉娑撳�愭憪鐠у嘲宕烽敍宀�婀呴張顒�宕烽妴浣风鞍閸楋负鈧�浣稿綁閸楋讣绱濇稉鍝勭秼閸撳秳绨ㄦい纭吽夋稉鈧�閻楀牆宕风挒鈥冲棘閼板啨鈧�?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('palm')">
+      <div class="feature-icon">閴�?/div>
+      <h3>閹靛��娴� / 闂堛垻娴�</h3>
+      <p>娑撳﹣绱堕幒灞界妇閻撗勫灗濮濓綀鍔�閻撗嶇礉閸ュ�哥搏閸ュ彞绗傞崣顖濐潌閻楃懓绶涢柅鎰�顔岄崚鍡樼�介妴?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('naming')">
+      <div class="feature-icon">棣冩嚉</div>
+      <h3>鐎规繂鐤傜挧宄版倳</h3>
+      <p>缂佹挸鎮庨崗顐㈢摟閸犳粌绻夐妴渚�鐓堕棅鐢电應閻㈡眹鈧�浣稿悁閺佸懓鐦茬拠宥忕礉缂佹瑥顒㈢�涙劒绔存稉顏団偓鎰�婀呴惃鍕�鎮曠�涙ぜ鈧�?/p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('meditation')">
+      <div class="feature-icon">棣冾潩</div>
+      <h3>闂堟瑥绺剧粋鍛�娼�</h3>
+      <p>闁界喓锛岄崣銈勭�伴妴浣风稉閸欓攱鈷岄棅鐐解偓浣圭箒鐏炶鲸閭�濮樻番鈧�鍌涙）閺冦儰绔撮崸鎰剁礉鐠佲晞鍤滃�歌鲸鍙冩稉瀣�娼甸妴?/p>
+    </a>
+  </div>
+
+  <div class="why-section">
+    <h2>涓轰綍閫夎彥鎻愯嫅</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon">棣冩憪</div>
+        <h4>閸欍倗鐫勬稉鐑樺祦</h4>
+        <p>缁涙崘姘ㄩ妴浣稿捶鏉堢偟娈曢弫瀵告倞閼奉亙绱剁紒鐔峰綔缁�宥忕礉濠ь垱婀板〒鍛�绨�閵�?/p>
+      </div>
+      <div class="why-item">
+        <div class="icon">棣冃�</div>
+        <h4>閻�鐔稿笓閻�?/h4>
+        <p>閸忣偄鐡ф禒銉х彌閺勩儴濡�濮樻柧璐熼悾宀嬬礉闂堢偞婀�閸掓繀绔村ú淇扁偓鍌涘笓閻╂ü寮楃拫銊ｂ偓?/p>
+      </div>
+      <div class="why-item">
+        <div class="icon">棣冨箒</div>
+        <h4>婢舵岸顥撻弽鑹靶掔拠?/h4>
+        <p>閸欘垶鈧�澶夌瑝閸氬矂顥撻弽鑲╂畱"鐢�鍫㈠煑"瀵�鈧�缁�鐚寸礉閹�缁樻箒娑撯偓濞嗘儳顨栭崥鍫熷亶閻ㄥ嫬绺炬晶鍐︹偓?/p>
+      </div>
+      <div class="why-item">
+        <div class="icon">棣冩晙</div>
+        <h4>闂呮劗顫嗘穱婵囧Б</h4>
+        <p>閹�銊﹀絹娴溿倗娈戞穱鈩冧紖娴犲懐鏁ゆ禍搴㈡拱濞喡ば掔拠浼欑礉娑撳秴鐡ㄩ崒銊ょ瑝婢舵牔绱堕妴?/p>
+      </div>
+    </div>
+  </div>
+
+  <div class="incense-section" id="incenseSection">
+    <h2>棣冩�� 鍦ㄧ嚎涓婇��</h2>
+    <p>鏁�涓婁竴鐐锋竻妫ｆ瑱绱濈粊鍫熷姽楠炲啿鐣ㄩ崥澶屻偉</p>
+    <div class="incense-container" id="incenseContainer"></div>
+    <button class="incense-btn" onclick="burnIncense()">鏁�涓婁竴鐐锋竻妫�?/button>
+  </div>
+
+  <div class="share-section">
+    <h2>鍒嗕韩缁欏�朵汉 路 涓�璧疯�板綍蹇冩効/h2>
+    <p>灏嗚彥鎻愯嫅鍒嗕韩缂佹瑤缈伴張瀣�銈介崣瀣剁礉娑撯偓鐠ц渹璐熺�规湹姹夌粊鍫㈩洿</p>
+    <button class="share-btn" onclick="shareSite()">棣冩憶 閸掑棔闊╃紒娆忋偨閸�?/button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="alert('閻�銊﹀煕閸楀繗顔呴敍姘�婀伴獮鍐插酱閸愬懎顔愭禒鍛�绶垫导鐘电埠閺傚洤瀵查崣鍌濃偓鍐跨礉娑撳秵鐎�閹存劒鎹㈡担鏇炵紦鐠侇喓鈧�?)">閻�銊﹀煕閸楀繗顔�</a>
+      <a href="javascript:void(0)" onclick="alert('闂呮劗顫嗙拠瀛樻�戦敍姘�鍋嶆稉璇插З鏉堟挸鍙嗛惃鍕�淇婇幁顖欑矌閻�銊ょ艾閺堫剚顐奸崝鐔诲厴鏉╂劘顢戦敍灞肩瑝娴兼艾鐡ㄩ崒銊ュ煂閺堝秴濮熼崳銊ｂ偓?)">闂呮劗顫嗙拠瀛樻��</a>
+      <a href="javascript:void(0)" onclick="alert('AI 閻㈢喐鍨氱拠瀛樻�戦敍姘跺劥閸掑棜袙鐠囪�插敶鐎瑰湱鏁� AI 濡�鈥崇�烽悽鐔稿灇閿涘矁顕�缂佹挸鎮庨悳鏉跨杽閹�鍛�鍠岄崚銈嗘焽閵�?)">AI 閻㈢喐鍨氱拠瀛樻��</a>
+    </div>
+    <p>鑿╂彁鑻�?璺� 涓哄�朵汉绁堢�忓繑鐪伴悘鐢殿劮 璺� 娴犲懍绶典紶缁熸枃鍖栧弬鑰�/p>
+  </footer>
+</section>
+
+<!-- ====== WISH ====== -->
+<section class="page-section" id="page-wish">
+  <div class="page-header">
+    <h1>棣冪崲 韫囧啯鍔规笟娑氫紖</h1>
+    <p class="subtitle">閻愰�涚�撮惄蹇曚紖閿涘苯鍟撴稉瀣╃�存禒鐣岊殺閹板尅绱濋悾娆戠舶鐎规湹姹夐妴浣藉殰瀹歌鲸鍨ㄩ柌宥堫洣閺冭泛鍩㈡稉鈧�娴犺姤淇�閸滃瞼娈戞禒顏勭础閹�?/p>
+    <div style="margin-top:12px;color:var(--text-muted);font-size:14px;">
+      瀹歌尙鍋ｆ禍?<span id="lampCount" style="color:var(--gold)">46</span> 閻�?璺�
+      娴犲﹥妫╅弬鏉款杻 <span id="lampToday" style="color:var(--gold)">0</span> 閻�?    </div>
+  </div>
+
+  <div class="lamp-wall" id="lampWall"></div>
+
+  <div class="card" style="margin-top:24px;">
+    <h3 style="color:var(--gold);margin-bottom:16px;">棣冩殲 娑撻缚鐨濋悙鍦�浼�</h3>
+    <div class="form-group">
+      <label class="form-label">鐎规湹姹夋慨鎾虫倳</label>
+      <input class="form-input" id="wishName" placeholder="鏉堟挸鍙嗙�规湹姹夋慨鎾虫倳">
+    </div>
+    <div class="form-group">
+      <label class="form-label">娑撳孩鍋嶉惃鍕�鍙х化?/label>
+      <select class="form-select" id="wishRelation">
+        <option>閻栨湹缈�</option><option>濮ｅ秳缈�</option><option>閻栧彉姹�</option>
+        <option>鐎涒晛鐡�</option><option>鐎涙瑨绶�</option><option>閺堝��寮�</option><option>閼奉亜绻�</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">闁�澶夌�撮惄蹇曚紖</label>
+      <div class="chip-group" id="lampTypeGroup">
+        <span class="chip selected" data-type="濞撳懎绺鹃悘?>濞撳懎绺鹃悘?棣冩櫓閿�?/span>
+        <span class="chip" data-type="閺呯儤鍙庨悘?>閺呯儤鍙庨悘?棣冩憥</span>
+        <span class="chip" data-type="闂�鍨�顕撮悘?>闂�鍨�顕撮悘?棣冨岸</span>
+        <span class="chip" data-type="楠炲啿鐣ㄩ悘?>楠炲啿鐣ㄩ悘?棣冩礉閿�?/span>
+        <span class="chip" data-type="婵�鑽ょ喘閻�?>婵�鑽ょ喘閻�?閴傘倧绗�</span>
+        <span class="chip" data-type="鐠愩垻顩撮悘?>鐠愩垻顩撮悘?棣冩尩</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">娓氭稑顨庨弮鍫曟毐</label>
+      <div class="chip-group" id="lampDurationGroup">
+        <span class="chip selected" data-duration="娑撯偓閺堝牅绶垫總? data-price="3.9">娑撯偓閺堝牅绶垫總?妤�3.9</span>
+        <span class="chip" data-duration="閻х偓妫╂笟娑橆殠" data-price="5.9">閻х偓妫╂笟娑橆殠 妤�5.9</span>
+        <span class="chip" data-duration="娑撯偓楠炵繝绶垫總? data-price="9.9">娑撯偓楠炵繝绶垫總?妤�9.9</span>
+        <span class="chip" data-duration="濮橀晲绠欓梹鎸庢��" data-price="19.9">濮橀晲绠欓梹鎸庢�� 妤�19.9</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">韫囧啯鍔归敍鍫濆讲闁�澶涚礉閺堚偓婢�?0鐎涙�嬬礆</label>
+      <textarea class="form-input" id="wishMessage" maxlength="80" placeholder="閸愭瑤绗呴幃銊ф畱韫囧啯鍔�..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">閹�銊ф畱缁夋澘鎳犻敍鍫濆讲闁�澶涚礉娴兼碍妯夌粈鍝勬躬閻忣垰顣鹃敍?/label>
+      <input class="form-input" id="wishSender" placeholder="婵″偊绱伴崰鍕�淇� 閹�?閹�銊ф畱閸氬秴鐡�">
+    </div>
+    <div style="text-align:center;margin:16px 0;">
+      闂団偓娓氭稑顨� <span class="price-tag" id="wishPrice">妤�3.9</span>
+    </div>
+    <button class="btn-primary" onclick="lightLamp()">棣冪崲 閻愰�涘瘨濮濄倗浼�</button>
+  </div>
+</section>
+
+<!-- ====== CALENDAR ====== -->
+<section class="page-section" id="page-calendar">
+  <div class="page-header">
+    <h1>棣冩惍 娴犲﹥妫╂�涘嫬宸�</h1>
+    <p class="subtitle">楠炲弶鏁�鐎规粌绻� 璺� 缁佺偟鍘奸崘鑼�鍘� 璺� 閸椾椒绨╅弮鎯版櫙</p>
+  </div>
+  <div class="card">
+    <div class="cal-header">
+      <button class="cal-nav-btn" onclick="changeDay(-1)">閳尖偓 閸撳秳绔存径?/button>
+      <div><h2 id="calTitle">--</h2><div class="cal-sub" id="calSub">--</div></div>
+      <button class="cal-nav-btn" onclick="changeDay(1)">閸氬簼绔存径?閳�?/button>
+    </div>
+    <div class="cal-day-badge shangshang" id="calBadge">
+      <div class="day-level" id="calLevel">娑撳﹣绗�</div>
+      <div class="day-desc" id="calDesc">鐠囬晲绨ㄦ径褍鎮�</div>
+      <div class="day-lunar" id="calLunar">--</div>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-col">
+        <h3>鐎�?璺� 娴犲﹥妫╅柅鍌氭値</h3>
+        <div class="cal-tags" id="calYi"></div>
+      </div>
+      <div class="cal-col">
+        <h3>韫�?璺� 娴犲﹥妫╅柆鍨�绱�</h3>
+        <div class="cal-tags" id="calJi"></div>
+      </div>
+    </div>
+    <div class="cal-grid" style="margin-top:16px;">
+      <div class="cal-col">
+        <h3>缁佺偟鍘� 璺� 閸愯尙鍘�</h3>
+        <div id="calShensha" class="cal-detail-grid"></div>
+      </div>
+      <div class="cal-col">
+        <h3>閺冩儼鏅�閸氬�婂毄</h3>
+        <table class="shichen-table" id="calShichen"><tbody></tbody></table>
+      </div>
+    </div>
+    <h3 style="color:var(--gold);margin:20px 0 12px;font-size:16px;">閺堫亝娼垫稉鍐╂）</h3>
+    <div class="week-forecast" id="weekForecast"></div>
+  </div>
+</section>
+
+<!-- ====== DIVINATION ====== -->
+<section class="page-section" id="page-divination">
+  <div class="page-header">
+    <h1>棣冨竾 閸忓啿绗ｉ悘鐢殿劮</h1>
+    <p class="subtitle">韫囧啳鐦归崚娆戜紥 璺� 姒涙ê搴烽幍鈧�濮�?璺� 閹舵垝绔撮弨顖滎劮</p>
+    <div style="margin-top:8px;color:var(--text-muted);font-size:13px;">娴犲﹥妫╅崗宥堝瀭 1/1 濞�?/div>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">鐠囩兘鈧�澶夌�存担宥呯瑎閻栨湹璐熼幃銊ョ磻缁�?/label>
+      <div class="master-grid" id="masterSelect">
+        <div class="master-card selected" data-master="閹毖勬�戦梹鑳�鈧�? onclick="selectMaster(this,'閹毖勬�戦梹鑳�鈧�?)">
+          <div class="master-avatar">棣冾潩</div>
+          <div class="master-name">閹毖勬�戦梹鑳�鈧�?/div>
+          <div class="master-title">閸欍倕顕�娴ｅ繑瀵�</div>
+          <div class="master-desc">鎼村嫰鍣搁幐渚�鍣搁敍灞界穿缂佸繑宓侀崗?/div>
+        </div>
+        <div class="master-card" data-master="閺勫骸绺剧敮鍫㈠煑" onclick="selectMaster(this,'閺勫骸绺剧敮鍫㈠煑')">
+          <div class="master-avatar">棣冩��</div>
+          <div class="master-name">閺勫骸绺剧敮鍫㈠煑</div>
+          <div class="master-title">鐏忛棿绱�濞夋洖绗�</div>
+          <div class="master-desc">閹卞牊鍋涘〒鈺傜厤閿涘苯濮栨禍鍝勬倻閸�?/div>
+        </div>
+        <div class="master-card" data-master="閻滃嫮婀￠柆鎾绘毐" onclick="selectMaster(this,'閻滃嫮婀￠柆鎾绘毐')">
+          <div class="master-avatar">閳筋垽绗�</div>
+          <div class="master-name">閻滃嫮婀￠柆鎾绘毐</div>
+          <div class="master-title">鐏炲彉鑵戦柆鎾叉眽</div>
+          <div class="master-desc">閻╁�稿煡闁�姘垛偓蹇ョ礉鐠囨潙銇囬惂鍊熺樈</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">閸愭瑤绗呴幃銊�顩﹂梻顔炬畱娴�?/label>
+      <input class="form-input" id="qianQuestion" placeholder="娓氬��顩ч敍姘�顔嶆禍楦块煩娴ｆ捁鍏橀崥锕�鐣ㄦ惔鍑ょ吹">
+    </div>
+    <button class="btn-primary" onclick="drawQian()">棣冨竾 姒涙ê搴烽幍鈧�濮�?璺� 濮瑰倷绔撮弨顖滎劮</button>
+    <div class="result-box" id="qianResult"></div>
+  </div>
+</section>
+
+<!-- ====== BAZI ====== -->
+<section class="page-section" id="page-bazi">
+  <div class="page-header">
+    <h1>棣冪崫 閸忣偄鐡х划鐐�澹�</h1>
+    <p class="subtitle">鏉堟挸鍙嗛悽鐔绘櫙閿涘瞼婀￠幒鎺旀磸閵嗕胶婀呴弽鐓庣湰閵嗕胶婀呮径褑绻嶉妴浣烘箙瀵ら缚顔�</p>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">鐠囩兘鈧�澶夌�存担宥呯瑎閻栨湹璐熼幃銊ョ磻缁�?/label>
+      <div class="master-grid" id="baziMasterSelect">
+        <div class="master-card selected" data-master="閹毖勬�戦梹鑳�鈧�? onclick="selectBaziMaster(this,'閹毖勬�戦梹鑳�鈧�?)">
+          <div class="master-avatar">棣冾潩</div>
+          <div class="master-name">閹毖勬�戦梹鑳�鈧�?/div>
+          <div class="master-title">閸欍倕顕�娴ｅ繑瀵�</div>
+          <div class="master-desc">鎼村嫰鍣搁幐渚�鍣搁敍灞界穿缂佸繑宓侀崗?/div>
+        </div>
+        <div class="master-card" data-master="閺勫骸绺剧敮鍫㈠煑" onclick="selectBaziMaster(this,'閺勫骸绺剧敮鍫㈠煑')">
+          <div class="master-avatar">棣冩��</div>
+          <div class="master-name">閺勫骸绺剧敮鍫㈠煑</div>
+          <div class="master-title">鐏忛棿绱�濞夋洖绗�</div>
+          <div class="master-desc">閹卞牊鍋涘〒鈺傜厤閿涘苯濮栨禍鍝勬倻閸�?/div>
+        </div>
+        <div class="master-card" data-master="閻滃嫮婀￠柆鎾绘毐" onclick="selectBaziMaster(this,'閻滃嫮婀￠柆鎾绘毐')">
+          <div class="master-avatar">閳筋垽绗�</div>
+          <div class="master-name">閻滃嫮婀￠柆鎾绘毐</div>
+          <div class="master-title">鐏炲彉鑵戦柆鎾叉眽</div>
+          <div class="master-desc">閻╁�稿煡闁�姘垛偓蹇ョ礉鐠囨潙銇囬惂鍊熺樈</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻獮?/label>
+        <input class="form-input" id="baziYear" type="number" value="1990" min="1900" max="2030">
+      </div>
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻張?/label>
+        <input class="form-input" id="baziMonth" type="number" value="6" min="1" max="12">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻弮?/label>
+        <input class="form-input" id="baziDay" type="number" value="15" min="1" max="31">
+      </div>
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻弮鎯版櫙</label>
+        <select class="form-select" id="baziHour">
+          <option value="0">鐎涙劖妞� (23:00-01:00)</option>
+          <option value="1">娑撴垶妞� (01:00-03:00)</option>
+          <option value="2">鐎靛懏妞� (03:00-05:00)</option>
+          <option value="3">閸楊垱妞� (05:00-07:00)</option>
+          <option value="4">鏉堢増妞� (07:00-09:00)</option>
+          <option value="5">瀹歌櫕妞� (09:00-11:00)</option>
+          <option value="6">閸楀牊妞� (11:00-13:00)</option>
+          <option value="7" selected>閺堫亝妞� (13:00-15:00)</option>
+          <option value="8">閻㈣櫕妞� (15:00-17:00)</option>
+          <option value="9">闁板�嬫�� (17:00-19:00)</option>
+          <option value="10">閹村本妞� (19:00-21:00)</option>
+          <option value="11">娴溿儲妞� (21:00-23:00)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">閹�褍鍩�</label>
+      <div class="chip-group">
+        <span class="chip selected" onclick="selectGender(this,'male')">閻�?/span>
+        <span class="chip" onclick="selectGender(this,'female')">婵�?/span>
+      </div>
+    </div>
+    <div style="color:var(--text-muted);font-size:12px;margin-bottom:16px;">
+      娴犲懍缍旀导鐘电埠閺傚洤瀵查崣鍌濃偓鍐跨礉鐠囬�庣波閸氬牏骞囩�圭偞鍎忛崘闈涘灲閺傤叏绱遍張顏呭姬18閸涖劌鐬剧拠宄板瑏娴ｈ法鏁ら張顒佹箛閸斅扳偓?    </div>
+    <button class="btn-primary" onclick="analyzeBazi()">閳�?瀵�鈧�婵�瀣�婀￠幒鎺旀磸</button>
+    <div class="result-box" id="baziResult"></div>
+  </div>
+</section>
+
+<!-- ====== DREAMS ====== -->
+<section class="page-section" id="page-dreams">
+  <div class="page-header">
+    <h1>棣冩寵 閸涖劌鍙曠憴锝嗏叺</h1>
+    <p class="subtitle">閻х偓鈪甸惃鍡樻箒閹�?璺� 閸欍倓绮栭惄绋垮棘鐠�?/p>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">鐠囬攱寮挎潻鐗堝亶濮婏缚鑵戦幍鈧�鐟�?/label>
+      <input class="form-input" id="dreamSearch" placeholder="婵�?濮婏箒顫嗘Λ娆嶁偓浣光叺鐟欎胶澧�姒绘寧甯�娴�? onkeyup="if(event.key==='Enter')searchDream()">
+    </div>
+    <button class="btn-primary" onclick="searchDream()">棣冩敵 鐟欙絾鈪�</button>
+    <div class="result-box" id="dreamResult"></div>
+
+    <h3 style="color:var(--gold);margin:24px 0 12px;">閹稿�岃��閺屻儲鈪�</h3>
+    <div class="dream-cats" id="dreamCats"></div>
+
+    <h3 style="color:var(--gold);margin:24px 0 12px;">閻戭參妫�濮婏箑顣�</h3>
+    <div class="dream-list" id="dreamList"></div>
+  </div>
+</section>
+
+<!-- ====== PALMISTRY ====== -->
+<section class="page-section" id="page-palm">
+  <div class="page-header">
+    <h1>閴�?閹靛��娴� / 闂堛垻娴�</h1>
+    <p class="subtitle">娑撳﹣绱堕幒灞界妇閻撗勫灗濮濓綀鍔�閻撗嶇礉閸ュ�哥搏閸ュ彞绗傞崣顖濐潌閻楃懓绶涢柅鎰�顔岄崚鍡樼��</p>
+  </div>
+  <div class="card">
+    <p style="text-align:center;color:var(--text-muted);padding:40px 20px;">
+      棣冩煠閿�?濮濄倕濮涢懗鑺ユ暜閹镐椒绗傛导鐘靛弾閻楀洩绻樼悰?AI 閸掑棙鐎�<br><br>
+      閸忓牓顣╃憴鍫濆晙鐟欙綁鏀ｇ�瑰本鏆ｇ拠锔藉�掗敍灞炬殮鐠囬攱婀″�板懎鐣�閺佸�稿�楅妴?    </p>
+    <div class="form-group">
+      <label class="form-label">闁�澶嬪�ㄩ崚鍡樼�界猾璇茬��</label>
+      <div class="chip-group">
+        <span class="chip selected">閹靛��娴�</span>
+        <span class="chip">闂堛垻娴�</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">娑撳﹣绱堕悡褏澧�</label>
+      <div style="border:2px dashed var(--border);border-radius:8px;padding:30px;text-align:center;color:var(--text-muted);cursor:pointer;">
+        棣冩懗 閻愮懓鍤�娑撳﹣绱堕悡褏澧栭敍鍫燁劃閸旂喕鍏樺��鈧�閸欐垳鑵戦敍?      </div>
+    </div>
+    <button class="btn-primary" disabled>瀵�鈧�婵�瀣�鍨庨弸?(閸楀啿鐨㈠��鈧�閺�?</button>
+  </div>
+</section>
+
+<!-- ====== NAMING ====== -->
+<section class="page-section" id="page-naming">
+  <div class="page-header">
+    <h1>棣冩嚉 鐎规繂鐤傜挧宄版倳</h1>
+    <p class="subtitle">缂佹挸鎮庨崗顐㈢摟閸犳粌绻夐妴渚�鐓堕棅鐢电應閻㈡眹鈧�浣稿悁閺佸懓鐦茬拠宥忕礉缂佹瑥顒㈢�涙劒绔存稉顏団偓鎰�婀呴惃鍕�鎮曠��?/p>
+  </div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻獮?/label>
+        <input class="form-input" id="nameYear" type="number" value="2026" min="2020" max="2030">
+      </div>
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻張?/label>
+        <input class="form-input" id="nameMonth" type="number" value="6" min="1" max="12">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻弮?/label>
+        <input class="form-input" id="nameDay" type="number" value="15" min="1" max="31">
+      </div>
+      <div class="form-group">
+        <label class="form-label">閸戣櫣鏁撻弮鎯版櫙</label>
+        <select class="form-select" id="nameHour">
+          <option value="0">鐎涙劖妞�</option><option value="1">娑撴垶妞�</option>
+          <option value="2">鐎靛懏妞�</option><option value="3">閸楊垱妞�</option>
+          <option value="4">鏉堢増妞�</option><option value="5">瀹歌櫕妞�</option>
+          <option value="6">閸楀牊妞�</option><option value="7" selected>閺堫亝妞�</option>
+          <option value="8">閻㈣櫕妞�</option><option value="9">闁板�嬫��</option>
+          <option value="10">閹村本妞�</option><option value="11">娴溿儲妞�</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">閹�褍鍩�</label>
+      <div class="chip-group">
+        <span class="chip selected" onclick="selectNamingGender(this,'male')">閻�?/span>
+        <span class="chip" onclick="selectNamingGender(this,'female')">婵�?/span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">婵�鎾寸毈</label>
+      <input class="form-input" id="nameSurname" value="閺�?>
+    </div>
+    <div class="form-group">
+      <label class="form-label">婵�鎾虫倳閹�璇茬摟閺佸府绱欓崥顐㈩潣閿�?/label>
+      <div class="chip-group">
+        <span class="chip" onclick="selectNameLength(this,2)">2 鐎涙�嬬礄婵�?閺夊骸鐣ㄩ敍?/span>
+        <span class="chip selected" onclick="selectNameLength(this,3)">3 鐎涙�嬬礄婵�?閺夊孩鈧�婵婄箼閿�?/span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">閸嬪繐銈芥�嬪孩鐗搁敍鍫熸付婢�?3 妞ょ櫢绱�</label>
+      <div class="chip-group" id="nameStyleGroup">
+        <span class="chip" data-style="鐠囨�佸壈">鐠囨�佸壈</span>
+        <span class="chip" data-style="閸掓碍鐦�">閸掓碍鐦�</span>
+        <span class="chip" data-style="閸庢帡娉�">閸庢帡娉�</span>
+        <span class="chip" data-style="濞撳懘鈧�?>濞撳懘鈧�?/span>
+        <span class="chip" data-style="閸忔悂娉�">閸忔悂娉�</span>
+        <span class="chip" data-style="濞撯晜榧�">濞撯晜榧�</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">鐎硅埖妫屾潏鍫濆瀻鐎涙�嬬礄闁�澶婏綖閿�?/label>
+      <input class="form-input" id="nameGeneration" placeholder="閼汇儱顔嶉柌灞藉嚒鐎规俺绶㈤崚鍡楃摟閿涘苯褰叉繅顐㈠弳">
+    </div>
+    <div class="form-group">
+      <label class="form-label">閹�鎶戒缉瀵�鈧�閻ㄥ嫬鐡ч敍鍫モ偓澶婏綖閿�?/label>
+      <input class="form-input" id="nameAvoid" placeholder="閸欘垰锝為崘娆撳櫢閸氬秴顦块幋鏍ь啀娑擃厺绗夐崰婊�绠ｇ��?>
+    </div>
+    <button class="btn-primary" onclick="startNaming()">棣冩嚉 瀵�鈧�婵�瀣╃瑩娑撴俺鎹ｉ崥?/button>
+    <div class="result-box" id="namingResult"></div>
+  </div>
+</section>
+
+<!-- ====== I CHING ====== -->
+<section class="page-section" id="page-iching">
+  <div class="page-header">
+    <h1>閳�?閸忣厾鍩㈤崡鐘插椽</h1>
+    <p class="subtitle">韫囧啳鎹ｆ稉鈧�韫�?璺� 娑撳�愭憪鐠у嘲宕�</p>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">鐠囩兘鈧�澶夌�存担宥呯瑎閻栨湹璐熼幃銊ョ磻缁�?/label>
+      <div class="master-grid" id="ichingMasterSelect">
+        <div class="master-card selected" data-master="閹毖勬�戦梹鑳�鈧�? onclick="selectIchingMaster(this,'閹毖勬�戦梹鑳�鈧�?)">
+          <div class="master-avatar">棣冾潩</div>
+          <div class="master-name">閹毖勬�戦梹鑳�鈧�?/div>
+          <div class="master-title">閸欍倕顕�娴ｅ繑瀵�</div>
+          <div class="master-desc">鎼村嫰鍣搁幐渚�鍣搁敍灞界穿缂佸繑宓侀崗?/div>
+        </div>
+        <div class="master-card" data-master="閺勫骸绺剧敮鍫㈠煑" onclick="selectIchingMaster(this,'閺勫骸绺剧敮鍫㈠煑')">
+          <div class="master-avatar">棣冩��</div>
+          <div class="master-name">閺勫骸绺剧敮鍫㈠煑</div>
+          <div class="master-title">鐏忛棿绱�濞夋洖绗�</div>
+          <div class="master-desc">閹卞牊鍋涘〒鈺傜厤閿涘苯濮栨禍鍝勬倻閸�?/div>
+        </div>
+        <div class="master-card" data-master="閻滃嫮婀￠柆鎾绘毐" onclick="selectIchingMaster(this,'閻滃嫮婀￠柆鎾绘毐')">
+          <div class="master-avatar">閳筋垽绗�</div>
+          <div class="master-name">閻滃嫮婀￠柆鎾绘毐</div>
+          <div class="master-title">鐏炲彉鑵戦柆鎾叉眽</div>
+          <div class="master-desc">閻╁�稿煡闁�姘垛偓蹇ョ礉鐠囨潙銇囬惂鍊熺樈</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">閸愭瑤绗呴幃銊�顩﹂梻顔炬畱娴�?/label>
+      <input class="form-input" id="ichingQuestion" placeholder="娓氬��顩ч敍姘崇箹濞嗏�冲毉鐞涘本妲搁崥锕傘�庨崚鈺嬬吹">
+    </div>
+    <button class="btn-primary" onclick="castIching()">閳�?閹藉洤濮╃粵鍓х摏 璺� 鐠у嘲宕�</button>
+    <div class="result-box" id="ichingResult"></div>
+  </div>
+</section>
+
+<!-- ====== MEDITATION ====== -->
+<section class="page-section" id="page-meditation">
+  <div class="page-header">
+    <h1>棣冾潩 闂堟瑥绺剧粋鍛�娼�</h1>
+    <p class="subtitle">闁界喓锛岄崣銈勭�� 璺� 娴ｆ稑褰垮�婄敻鐓� 璺� 濞ｅ崬鍖楀┃顏呮寜 璺� 閺冦儲妫╂稉鈧�閸ф劧绱濈拋鈺勫殰瀹歌鲸鍙冩稉瀣�娼�</p>
+  </div>
+  <div class="card">
+    <div class="meditation-area">
+      <div class="meditation-symbol" id="medSymbol">閳�?/div>
+      <div class="meditation-timer" id="medTimer">00:00</div>
+      <div style="color:var(--text-muted);margin-bottom:20px;" id="medStatus">閻愮懓鍤�瀵�鈧�婵�瀣剁礉闂堟瑥绺剧粋鍛�娼�</div>
+      <div class="meditation-controls">
+        <button class="btn-hero btn-hero-primary" id="medStartBtn" onclick="startMeditation()">瀵�鈧�婵�瀣�顩�閸�?/button>
+        <button class="btn-hero btn-hero-secondary" onclick="resetMeditation()">闁插秶鐤�</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<input type="file" id="fileInput" accept="image/*" style="display:none">
+
+<script>
+// ========== Navigation ==========
+function navigate(page) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById('page-' + page);
+  if (el) el.classList.add('active');
+  document.querySelectorAll('.banner-nav a').forEach(a => a.classList.remove('active'));
+  document.querySelectorAll(`.banner-nav a[onclick*="'${page}'"]`).forEach(a => a.classList.add('active'));
+  window.scrollTo(0, 0);
+  const nav = document.getElementById('mainNav');
+  nav.classList.remove('open');
+}
+
+function toggleNav() {
+  document.getElementById('mainNav').classList.toggle('open');
+}
+
+// ========== Data ==========
+let QIAN_DATA = [];
+let DREAM_DATA = [];
+let currentMaster = '閹毖勬�戦梹鑳�鈧�?;
+let currentBaziMaster = '閹毖勬�戦梹鑳�鈧�?;
+let currentIchingMaster = '閹毖勬�戦梹鑳�鈧�?;
+let selectedGender = 'male';
+let namingGender = 'male';
+let namingLength = 3;
+let namingStyles = [];
+let selectedLampType = '濞撳懎绺鹃悘?;
+let selectedDuration = '娑撯偓閺堝牅绶垫總?;
+let selectedPrice = 3.9;
+let currentDayOffset = 0;
+let meditationTimer = null;
+let meditationSeconds = 0;
+let meditationRunning = false;
+let lampData = [];
+
+async function loadData() {
+  try {
+    const qianResp = await fetch('data/qian.json');
+    QIAN_DATA = await qianResp.json();
+    const dreamResp = await fetch('data/dreams.json');
+    DREAM_DATA = await dreamResp.json();
+    initDreams();
+    initCalendar();
+    loadLamps();
+  } catch(e) {
+    // Fallback: use embedded data
+  }
+}
+
+// ========== Calendar (Lunar) ==========
+// TIANGAN/DIZHI/SHENGXIAO/SHICHEN now defined in lunar-wrapper.js
+
+// 浣跨敤 lunar-wrapper.js 鏇夸唬锛坙unar-javascript 鐪熸帓鐩橈級
+let calendarDate = new Date();
+
+function initCalendar() {
+  calendarDate = new Date();
+  renderCalendar();
+}
+
+function changeDay(delta) {
+  calendarDate.setDate(calendarDate.getDate() + delta);
+  renderCalendar();
+}
+
+function renderCalendar() {
+  const d = calendarDate;
+  const lunar = getLunarDate(d.getFullYear(), d.getMonth() + 1, d.getDate());
+  
+  document.getElementById('calTitle').textContent = `${d.getFullYear()}楠�?{d.getMonth()+1}閺�?{d.getDate()}閺冾櫐;
+  document.getElementById('calSub').textContent = `${lunar.weekDay} 璺� 閸愭粌宸�${lunar.monthName}閺�?{lunar.dayName}閺冾櫐;
+  document.getElementById('calLevel').textContent = lunar.level;
+  document.getElementById('calDesc').textContent = `娴犲﹥妫� 璺� ${lunar.level} 璺� 鐎�?{lunar.yi.slice(0,2).join('閵�?)}`;
+  document.getElementById('calLunar').textContent = `楠炲弶鏁�閿�?{lunar.ganzhiYear}楠�?${lunar.ganzhiMonth}閺�?${lunar.ganzhiDay}閺�?(${lunar.shengxiao}楠�?`;
+  
+  const badge = document.getElementById('calBadge');
+  badge.className = 'cal-day-badge ' + (lunar.level.includes('娑�?) ? 'shangshang' : lunar.level.includes('娑�?) ? 'zhongji' : 'xiaxia');
+  
+  document.getElementById('calYi').innerHTML = lunar.yi.filter(y => y !== '---').map(y => `<span class="cal-tag yi">${y}</span>`).join('');
+  document.getElementById('calJi').innerHTML = lunar.ji.filter(y => y !== '---').map(y => `<span class="cal-tag ji">${y}</span>`).join('');
+  
+  const ss = lunar.shensha;
+  document.getElementById('calShensha').innerHTML = `
+    <div class="cal-detail-label">閸氬�岊殻鐎规粏绉�</div><div class="cal-detail-value">${ss['閸氬�岊殻鐎规粏绉�'].join('閵�?)}</div>
+    <div class="cal-detail-label">閸戝墎顨ｇ�规粓浼�</div><div class="cal-detail-value">${ss['閸戝墎顨ｇ�规粓浼�'].join('閵�?)}</div>
+    <div class="cal-detail-label">閸愯尙鍘�</div><div class="cal-detail-value">${ss['閸愯尙鍘�']}</div>
+    <div class="cal-detail-label">閼冲海顨ｉ弬閫涚秴</div><div class="cal-detail-value">${ss['閼冲海顨ｉ弬閫涚秴']}</div>
+    <div class="cal-detail-label">28鐎�?/div><div class="cal-detail-value">${ss['28鐎�?]} 璺� ${ss['鐎瑰灝鎮忛崙?]}</div>
+    <div class="cal-detail-label">12瀵ゆ椽娅�</div><div class="cal-detail-value">${ss['12瀵ゆ椽娅�']}</div>
+  `;
+  
+  document.querySelector('#calShichen tbody').innerHTML = lunar.shichen.map(sc => `
+    <tr><td>${sc.name}</td><td>${sc.gan}${sc.zhi}</td><td>閸愯�х窗${sc.chong}(${sc.chongAnimal})</td><td>${sc.luck}</td></tr>
+  `).join('');
+  
+  document.getElementById('weekForecast').innerHTML = lunar.weekForecast.map(wf => `
+    <div class="week-day">
+      <div class="wd-name">${wf.weekDay}</div>
+      <div class="wd-day">${wf.lunarDay}</div>
+      <div class="wd-level ${wf.level.includes('娑�?)?'shangshang':wf.level.includes('娑�?)?'zhongji':'xiaxia'}">${wf.level}</div>
+    </div>
+  `).join('');
+}
+
+// ========== Divination ==========
+function selectMaster(el, name) {
+  document.querySelectorAll('#masterSelect .master-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  currentMaster = name;
+}
+
+function drawQian() {
+  const qianNum = Math.floor(Math.random() * 100) + 1;
+  const qian = QIAN_DATA.find(q => q.id === qianNum) || QIAN_DATA[qianNum - 1];
+  const question = document.getElementById('qianQuestion').value || '閺堫亜锝為崘娆忓徔娴ｆ挷绨ㄦい?;
+  
+  const typeClass = qian.type.includes('娑�?) ? 'shangshang' : qian.type.includes('娑�?) ? 'shang' : 'xia';
+  
+  let masterIntro = '';
+  switch(currentMaster) {
+    case '閹毖勬�戦梹鑳�鈧�?: masterIntro = '閵嗗﹥绗傚ù宄扮摍楠炵偨鈧�瀣�婀佹禍鎴�绱板�濄倗顒烽梼鎾�妲煎�版ぞ缍呴敍宀�顩撮弰鐔哄弾閸涘�愨偓鍌涙煢娑撶粯澧嶉梻顔荤�ｆ禍瀣剁礉閺嶇懓鐔�瀹告彃鐣鹃敍灞芥倧閺冪姳绗夐崚鈹库偓?; break;
+    case '閺勫骸绺剧敮鍫㈠煑': masterIntro = '闂冨灝璁ラ梽鈧�娴ｆ稏鈧�鍌涙煢娑撶粯澧嶉梻顕嗙礉閸犲嫮绱�瀹歌尪鍤﹂妴鍌涱劃缁涚偓婀侀幈鍫熷仜閹躲倓缍夐敍灞肩瑝韫囧懓绻冩禍搴″挅閾忔埊绱濈�瑰�婄妇娓氭寧妲哥粋蹇嬧偓?; break;
+    case '閻滃嫮婀￠柆鎾绘毐': masterIntro = '鏉╂瑩浜剧粵鎯с偨閿涗胶娲跨拠绮光偓鏂衡偓鏃囩箹缁涚偓妲搁崥澶岊劮閿涘本婀侀崯銉ャ偨閹峰懎绺鹃惃鍕剁吹閹稿�夌稑韫囧啴鍣烽幆宕囨畱閸樿�蹭粵閿涘苯鍣�濞岋繝鏁婇敍?; break;
+  }
+  
+  document.getElementById('qianResult').innerHTML = `
+    <div class="qian-number">缁�?${qian.id} 缁�?璺� <span class="qian-type ${typeClass}">${qian.type}</span></div>
+    <div style="text-align:center;font-size:18px;color:var(--gold-light);font-family:'Noto Serif SC',serif;margin-bottom:12px;">${qian.title}</div>
+    <div class="qian-text">"${qian.poem}"</div>
+    <div style="color:var(--text-secondary);margin-bottom:16px;"><strong>閹�銊╂６閿�?/strong>${question}</div>
+    <div class="qian-interp">
+      <p style="color:var(--gold);margin-bottom:8px;"><strong>棣冩�� ${currentMaster} 瀵�鈧�缁�鐚寸窗</strong></p>
+      <p>${masterIntro}</p>
+      <p style="margin-top:8px;">${qian.interp}</p>
+      <p style="margin-top:8px;color:var(--text-muted);font-style:italic;">缁涚偓鏋冮弴甯�绱�${qian.text}</p>
+    </div>
+  `;
+  document.getElementById('qianResult').classList.add('show');
+}
+
+// ========== Dreams ==========
+function initDreams() {
+  const cats = [...new Set(DREAM_DATA.map(d => d.cat))];
+  document.getElementById('dreamCats').innerHTML = cats.map(c => `<span class="dream-cat-btn" onclick="filterDreams('${c}',this)">${c}</span>`).join('');
+  renderDreamList(DREAM_DATA);
+}
+
+function renderDreamList(dreams) {
+  document.getElementById('dreamList').innerHTML = dreams.slice(0, 20).map(d => `
+    <div class="dream-item" onclick="showDreamDetail(${d.id})">
+      <h4>${d.title}</h4>
+      <span class="dream-badge" style="background:${d.type.includes('娑�?)?'rgba(76,175,80,0.2)':d.type.includes('娑�?)?'rgba(255,213,79,0.2)':'rgba(239,83,80,0.2)'};color:${d.type.includes('娑�?)?'#4caf50':d.type.includes('娑�?)?'#ffd54f':'#ef5350'}">${d.type}</span>
+      <p>${d.desc.slice(0, 30)}...</p>
+    </div>
+  `).join('');
+}
+
+function filterDreams(cat, el) {
+  document.querySelectorAll('.dream-cat-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  const filtered = cat === '閸忋劑鍎�' ? DREAM_DATA : DREAM_DATA.filter(d => d.cat === cat);
+  renderDreamList(filtered);
+}
+
+function searchDream() {
+  const q = document.getElementById('dreamSearch').value.trim();
+  if (!q) { renderDreamList(DREAM_DATA); return; }
+  const results = DREAM_DATA.filter(d => d.title.includes(q) || d.desc.includes(q));
+  if (results.length === 0) {
+    document.getElementById('dreamResult').innerHTML = '<div style="color:var(--text-muted);text-align:center;">閺堫亝澹橀崚鎵�娴夐崗铏�鈪垫晶鍐跨礉鐠囨洝鐦�閸忔湹绮�閸忔娊鏁�鐠�?/div>';
+    document.getElementById('dreamResult').classList.add('show');
+    renderDreamList(DREAM_DATA);
+  } else {
+    document.getElementById('dreamResult').classList.remove('show');
+    renderDreamList(results);
+  }
+}
+
+function showDreamDetail(id) {
+  const d = DREAM_DATA.find(x => x.id === id);
+  if (!d) return;
+  document.getElementById('dreamResult').innerHTML = `
+    <h4 style="color:var(--gold);font-size:18px;margin-bottom:8px;">${d.title}</h4>
+    <span class="dream-badge" style="background:${d.type.includes('娑�?)?'rgba(76,175,80,0.2)':d.type.includes('娑�?)?'rgba(255,213,79,0.2)':'rgba(239,83,80,0.2)'};color:${d.type.includes('娑�?)?'#4caf50':d.type.includes('娑�?)?'#ffd54f':'#ef5350'}">${d.type}</span>
+    <p style="color:var(--text-secondary);margin-top:12px;">${d.desc}</p>
+    <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">閸掑棛琚�閿�?{d.cat}</p>
+  `;
+  document.getElementById('dreamResult').classList.add('show');
+}
+
+// ========== Bazi ==========
+function selectBaziMaster(el, name) {
+  document.querySelectorAll('#baziMasterSelect .master-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  currentBaziMaster = name;
+}
+
+function selectGender(el, gender) {
+  document.querySelectorAll('#page-bazi .chip-group .chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedGender = gender;
+}
+
+function analyzeBazi() {
+  const year = parseInt(document.getElementById('baziYear').value) || 1990;
+  const month = parseInt(document.getElementById('baziMonth').value) || 6;
+  const day = parseInt(document.getElementById('baziDay').value) || 15;
+  const hourIdx = parseInt(document.getElementById('baziHour').value) || 0;
+  
+  const lunar = getLunarDate(year, month, day);
+  
+  const tianGan4 = lunar.ganzhiYear[0] + lunar.ganzhiMonth[1] + lunar.ganzhiDay[0] + DI_ZHI[hourIdx];
+  const diZhi4 = lunar.ganzhiYear[1] + lunar.ganzhiMonth[1] + lunar.ganzhiDay[1] + DI_ZHI[hourIdx];
+  
+  const wuxing = ['閺�?,'閺�?,'閻�?,'閻�?,'閸�?,'閸�?,'闁�?,'闁�?,'濮�?,'濮�?];
+  const dayGan = lunar.ganzhiDay[0];
+  const dayGanIdx = TIAN_GAN.indexOf(dayGan);
+  const dayWuXing = wuxing[dayGanIdx];
+  
+  const dayMaster = ['閻㈠弶婀�','娑旀瑦婀�','娑撴瑧浼�','娑撲胶浼�','閹村﹤婀�','瀹稿崬婀�','鎼存岸鍣�','鏉堟盯鍣�','婢诡剚鎸�','閻у憡鎸�'][dayGanIdx];
+  
+  let analysis = '';
+  let advice = '';
+  switch(currentBaziMaster) {
+    case '閹毖勬�戦梹鑳�鈧�?:
+      analysis = `濮濄倕鎳￠弮銉ゅ瘜娑�?{dayMaster}閿涘瞼鏁撴禍?{lunar.ganzhiMonth}閺堝牄鈧�鍌欑贩閵嗗﹥绗傚ù宄扮摍楠炵偨鈧�瀣�顔戞稊瀣剁礉閺冦儱娼�${wuxing[lunar.ganzhiDay[1] % 10 === 0 ? 0 : 1]}閿涘本妞傞弻杈ㄦ��閽�?{wuxing[hourIdx % 10]}濮樻柣鈧�鍌氭嚒閺嶅吋鐗撮崺?{['閺�?,'缁�?,'楠�?,'瀵�?,'閸嬪繐鎬�'][dayGanIdx % 5]}閿涘苯鐤�${['鐞涖儲婀�','鐞涖儲鎸�','鐞涖儲婀�閻�?,'鐞涖儳浼�閸�?,'鐞涖儱婀￠柌?,'鐞涖儵鍣惧��?,'鐞涖儱婀�','鐞涖儳浼�','鐞涖儵鍣�','鐞涖儲婀�閻�?][dayGanIdx]}娑撹櫣鏁ら妴淇�;
+      advice = '婢堆嗙箥鐠ф澘濞嶉敍姘�妫�楠炵�嬬箥閸斿灝閽╃粙绛圭礉娑擃厼鍕鹃崥搴㈢瑤閸忋儰鍖犳晶鍐︹偓鍌氱秼閸撳秵澧嶇悰灞姐亣鏉╂劧绱濈�规粓娼ょ憴鍌氬従閸欐﹫绱濇稉宥呯杹閸愭帟绻橀妴鍌涚湴鐠愩垹鐤佺粙绛圭礉濮瑰倸鎮曠�规粌鐤勯妴?;
+      break;
+    case '閺勫骸绺剧敮鍫㈠煑':
+      analysis = `闂冨灝璁ラ梽鈧�娴ｆ稏鈧�鍌涙煢娑撹�叉嚒閻�?{dayMaster}娑撻缚闊╅敍?{lunar.ganzhiMonth}娑撹桨鎶ら妴鍌涙）娑撶粯淇�閸滃矉绱濇禍鏃囶攽濞翠浇娴嗛張澶嬪剰閵嗗倸顔嶆惔顓烆唫娴ｅ秴鎷伴惈锔肩礉閹扮喐鍎忕痪澶哥瑐閺堝�婃倧閺勭喓鍙庨幏鍌樷偓淇�;
+      advice = '閹卞牊鍋涙稉鐑樷偓鈧�閿涘瞼顩撮幎銉ㄥ殰閺夈儯鈧�鍌涙煢娑撹�茬妇閹�褍鏉介懝顖ょ礉閸涙垝鑵戦懛顏呮箒鐠愬吀姹夐幎銈勭秹閵嗗倹鏂佺�硅棄绺鹃幀渚婄礉娑撯偓閸掑洩鍤滈張澶婄暔閹烘帇鈧�鍌氼樋鐞涘苯鏉芥禍瀣剁礉閼绢偊妫堕崜宥団柤閵�?;
+      break;
+    case '閻滃嫮婀￠柆鎾绘毐':
+      analysis = `鐠囩繝姹夌拠婵撶窗娴ｇ姾绻栭崨?{dayMaster}閿涘瞼鏁撻崷?{lunar.ganzhiMonth}閺堝牄鈧�鍌氬彄鐎涙�佸笓瀵�鈧�娑撯偓閻�瀣р偓鏂衡偓?{['娑撳秹鏁�','鏉╂�款攽','閸戞垵鎮�','閺堝�屽仯瀵�?,'婢剁喎鎲�'][dayGanIdx % 5]}閵嗗倹妫╂稉?{['閸嬪繑妞�','閺冭櫣娴�','娑擃厼鎷�','閸嬪繐鎬�','婢额亜鎬�'][dayGanIdx % 5]}閿�?{['閺堛劌顦�','閻忣偅妞�','閸︾喎甯�','闁叉垵宸�','濮樺瓨妞�'][dayGanIdx % 5]}閺勵垳澹掗悙骞库偓淇�;
+      advice = `閻╃�嬵嚛瀵ら缚顔呴敍?{['婢舵艾骞撳�樼�嬬珶鐠ф媽铔�','鐏忔垹鍟叉径婊�婵�閼�?,'濞夈劍鍓伴懖鐘哄剭','婢舵岸鏁鹃悙?,'閹貉冨煑閼寸偓鐨�'][dayGanIdx % 5]}閵嗗倷绨ㄦ稉姘�绗傞崚顐ユそ韫囶偓绱濈粙宕囨絻閺夈儯鈧�鍌濈箖娴�?{40 + (dayGanIdx * 2)}瀹�浣界箹閸忕�圭礉閸氬酣娼扮亸鍗炪偨鐠ч�佺啊閵嗕繖;
+      break;
+  }
+  
+  document.getElementById('baziResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:14px;color:var(--text-muted);margin-bottom:8px;">閸忣偄鐡ч幒鎺旀磸</div>
+      <div class="bazi-grid">
+        <div class="bazi-cell"><div class="bazi-pillar">楠炲瓨鐓�</div><div class="bazi-heaven">${lunar.ganzhiYear[0]}</div><div class="bazi-earth">${lunar.ganzhiYear[1]}</div></div>
+        <div class="bazi-cell"><div class="bazi-pillar">閺堝牊鐓�</div><div class="bazi-heaven">${lunar.ganzhiMonth[0]}</div><div class="bazi-earth">${lunar.ganzhiMonth[1]}</div></div>
+        <div class="bazi-cell"><div class="bazi-pillar">閺冦儲鐓�</div><div class="bazi-heaven">${lunar.ganzhiDay[0]}</div><div class="bazi-earth">${lunar.ganzhiDay[1]}</div></div>
+        <div class="bazi-cell"><div class="bazi-pillar">閺冭埖鐓�</div><div class="bazi-heaven">${TIAN_GAN[hourIdx]}</div><div class="bazi-earth">${DI_ZHI[hourIdx]}</div></div>
+      </div>
+      <div style="color:var(--text-muted);font-size:13px;margin-top:4px;">
+        閺冦儰瀵岄敍?span style="color:var(--gold)">${dayMaster}</span> 璺� 
+        閻㈢喕鍊撮敍?span style="color:var(--gold)">${lunar.shengxiao}</span> 璺� 
+        娴滄棁顢戦敍?{lunar.ganzhiYear[0]}${lunar.ganzhiYear[1]}楠�?      </div>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:16px;">
+      <p style="color:var(--gold);margin-bottom:8px;"><strong>棣冩�� ${currentBaziMaster} 瀵�鈧�缁�鐚寸窗</strong></p>
+      <p style="color:var(--text-secondary);">${analysis}</p>
+      <p style="color:var(--text-secondary);margin-top:12px;">${advice}</p>
+    </div>
+  `;
+  document.getElementById('baziResult').classList.add('show');
+}
+
+// ========== Naming ==========
+function selectNamingGender(el, gender) {
+  document.querySelectorAll('#page-naming .chip-group:first-of-type .chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  namingGender = gender;
+}
+
+function selectNameLength(el, len) {
+  document.querySelectorAll('#page-naming div.chip-group').forEach(g => {
+    if (g.id !== 'nameStyleGroup') {
+      g.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+    }
+  });
+  el.classList.add('selected');
+  namingLength = len;
+  // Re-select name styles
+  document.querySelectorAll('#nameStyleGroup .chip.selected').forEach(c => c.classList.remove('selected'));
+  namingStyles = [];
+}
+
+// Initialize name style chips
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('#nameStyleGroup .chip').forEach(c => {
+    c.addEventListener('click', function() {
+      const style = this.dataset.style;
+      if (this.classList.contains('selected')) {
+        this.classList.remove('selected');
+        namingStyles = namingStyles.filter(s => s !== style);
+      } else if (namingStyles.length < 3) {
+        this.classList.add('selected');
+        namingStyles.push(style);
+      }
+    });
+  });
+  
+  // Lamp type chips
+  document.querySelectorAll('#lampTypeGroup .chip').forEach(c => {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('#lampTypeGroup .chip').forEach(x => x.classList.remove('selected'));
+      this.classList.add('selected');
+      selectedLampType = this.dataset.type;
+    });
+  });
+  
+  // Lamp duration chips
+  document.querySelectorAll('#lampDurationGroup .chip').forEach(c => {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('#lampDurationGroup .chip').forEach(x => x.classList.remove('selected'));
+      this.classList.add('selected');
+      selectedDuration = this.dataset.duration;
+      selectedPrice = parseFloat(this.dataset.price);
+      document.getElementById('wishPrice').textContent = '妤�' + selectedPrice;
+    });
+  });
+});
+
+function startNaming() {
+  const surname = document.getElementById('nameSurname').value || '閺�?;
+  const year = parseInt(document.getElementById('nameYear').value) || 2026;
+  const month = parseInt(document.getElementById('nameMonth').value) || 6;
+  const day = parseInt(document.getElementById('nameDay').value) || 15;
+  const hourIdx = parseInt(document.getElementById('nameHour').value) || 0;
+  const generation = document.getElementById('nameGeneration').value || '';
+  const avoid = document.getElementById('nameAvoid').value || '';
+  
+  const lunar = getLunarDate(year, month, day);
+  const dayGan = TIAN_GAN.indexOf(lunar.ganzhiDay[0]);
+  const elements = ['閺�?,'閺�?,'閻�?,'閻�?,'閸�?,'閸�?,'闁�?,'闁�?,'濮�?,'濮�?];
+  const needElement = elements[(dayGan + 4) % 10];
+  
+  const namePool = {
+    '閺�?: [['濮�?,'濡�?,'濡�?,'濡�?,'閺�?,'濡�?,'濡�?,'閺�?,'濡�?,'閺�?,'閺�?,'閺�?,'濡�?,'濮�?,'閺�?,'濮�?,'閺�?,'濡�?,'濡�?,'濡锯偓'],
+           ['閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閼�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?]],
+    '閻�?: [['閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閻�?,'閼�?,'閼扳偓','閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?],
+           ['閻�?,'閻�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺勨偓','閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?,'閺�?]],
+    '閸�?: [['閸�?,'閸�?,'閸�?,'閸�?,'閸�?,'閸�?,'閸�?,'閸�?,'閸�?,'閸�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?],
+           ['瀹�?,'瀹�?,'瀹�?,'瀹�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'鐎�?,'婵�?,'婵�?,'瀹�?,'瀹�?,'瀹�?,'瀹�?]],
+    '闁�?: [['闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?],
+           ['闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闂�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?,'闁�?]],
+    '濮�?: [['濞�?,'濞�?,'濞�?,'閻�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?],
+           ['濠�?,'濞�?,'濠�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濞�?,'濠�?,'濞�?,'濞�?,'濠�?,'濠�?,'濠�?,'濠�?,'濞�?,'濞�?,'濞�?,'濞�?]]
+  };
+  
+  const pool = namePool[needElement] || namePool['閺�?];
+  const firstPool = pool[0];
+  const secondPool = pool[1];
+  
+  let results = [];
+  const count = namingLength === 2 ? 6 : 8;
+  const used = new Set();
+  
+  for (let i = 0; i < count * 3; i++) {
+    const first = firstPool[Math.floor(Math.random() * firstPool.length)];
+    const second = namingLength === 3 ? secondPool[Math.floor(Math.random() * secondPool.length)] : '';
+    const fullName = surname + first + second;
+    if (!used.has(fullName) && !(avoid && (fullName.includes(avoid) || avoid.includes(first) || avoid.includes(second)))) {
+      used.add(fullName);
+      if (namingLength === 2) {
+        results.push({ name: fullName, meaning: `${first} 閳�?${['閹哥儤瀚堟�傛ɑ纾�','濞撯晛鎷伴崕鎺楁长','閺勫簼瀵掗惈鎸庢��','閺侊箑甯ょ粙鎶藉櫢','閻忛潧濮╅懕顏呭弾'][Math.floor(Math.random()*5)]}`, detail: `娴滄棁顢戠悰?{needElement} 璺� 闂婃娊鐓�${['閹�鐘冲��','濞撳懓鍓�','濞存垵甯�','婵犲�庢祮','楠炲啿鎷�'][Math.floor(Math.random()*5)]}` });
+      } else {
+        results.push({ name: fullName, meaning: `${first} 璺� ${second || '閳�?} 閳�?${['閹靛秴宕曞Ο顏呭��','閸濅焦鈧�褔鐝�濞�?,'濞撯晜榧庢俊鍌滃竴','閸ф岸鐓ｆ稉宥嗗珗','閺呯儤鍙庨柅姘虫彧'][Math.floor(Math.random()*5)]}`, detail: `娴滄棁顢戠悰?{needElement} 璺� 閸戦缚鍤�${['閵嗗﹨鐦茬紒蹇嬧偓?,'閵嗗﹥顨熸潏鐐�鈧�?,'閵嗗﹨顔戠拠顓溾偓?,'閵嗗﹥妲楃紒蹇嬧偓?,'閸欍倛鐦查弬?][Math.floor(Math.random()*5)]}` });
+      }
+    }
+    if (results.length >= count) break;
+  }
+  
+  const genHtml = generation ? `<p style="color:var(--text-muted);font-size:13px;margin-bottom:12px;">鏉堝牆鍨庣�涙�嬬窗${generation}</p>` : '';
+  
+  document.getElementById('namingResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:14px;color:var(--gold);font-family:'Noto Serif SC',serif;">閹恒劏宕橀崥宥呯摟</div>
+      <div style="color:var(--text-muted);font-size:13px;">閸忣偄鐡ч崰?{needElement} 璺� ${namingLength}鐎涙��鎮�</div>
+    </div>
+    ${genHtml}
+    <div class="name-result">
+      ${results.map(r => `
+        <div class="name-card">
+          <div class="name">${r.name}</div>
+          <div class="name-meaning">${r.meaning}</div>
+          <div class="name-detail">${r.detail}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div style="color:var(--text-muted);font-size:12px;text-align:center;margin-top:16px;">
+      棣冩寱 娴犲懍缍旀导鐘电埠閺傚洤瀵查崣鍌濃偓鍐跨礉閺堚偓缂佸牐顕�娴犮儱鐤勯梽鍛�鍎忛崘闈涘灲閺�?    </div>
+  `;
+  document.getElementById('namingResult').classList.add('show');
+}
+
+// ========== I Ching ==========
+function selectIchingMaster(el, name) {
+  document.querySelectorAll('#ichingMasterSelect .master-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  currentIchingMaster = name;
+}
+
+const HEXAGRAMS = [
+  { name:'娑斿彞璐熸径?, symbol:'娴炩偓', desc:'閸掓艾浠存稉宥嗕紖閿涘苯銇夐柆鎾圭箥鐞涘被鈧�?, gua:'娑斿彞绗傛稊鍙ョ瑓' },
+  { name:'閸с倓璐熼崷?, symbol:'娴�?, desc:'閸樻艾鐥夋潪鐣屽⒖閿涘苯瀵樼�归�涚�鹃悧鈹库偓?, gua:'閸с倓绗傞崸銈勭瑓' },
+  { name:'濮樻挳娴勭仦?, symbol:'娴�?, desc:'閸掓稑顫愭稊瀣�澹堥敍灞界杹鐎瑰牊顒滈崶鎭掆偓?, gua:'閸у簼绗傞棁鍥︾瑓' },
+  { name:'鐏炶鲸鎸夐拏?, symbol:'娴�?, desc:'閸氼垵鎸嬮崣鎴炴�ら敍宀�顏㈤拏娆愮湴閹存垯鈧�?, gua:'閼诡喕绗傞崸搴濈瑓' },
+  { name:'濮樻潙銇夐棁鈧�', symbol:'娴�?, desc:'缁涘�婄窡閺冭埖婧�閿涘矁鐦规穱鈥冲灟閸氬�堚偓?, gua:'閸у簼绗傛稊鍙ョ瑓' },
+  { name:'婢垛晜鎸夌拋?, symbol:'娴�?, desc:'娴滃�庮啌娑撳秴鍩勯敍灞芥嫲鐟欙絼璐熺拹鐐光偓?, gua:'娑斿彞绗傞崸搴濈瑓' },
+  { name:'閸︾増鎸夌敮?, symbol:'娴�?, desc:'缂佺喓宸兼稊瀣�钖勯敍灞界瑎閸戠儤婀侀崥宥冣偓?, gua:'閸с倓绗傞崸搴濈瑓' },
+  { name:'濮樻潙婀村В?, symbol:'娴�?, desc:'娴滄煡妾�閸ャ垻绮ㄩ敍灞肩船娴滆櫣娴夐崝鈹库偓?, gua:'閸у簼绗傞崸銈勭瑓' },
+  { name:'妞嬪骸銇夌亸蹇曟殔', symbol:'娴�?, desc:'閽冨嫮袧閸旀盯鍣洪敍灞界毈閹存劒绠ｇ挒掳鈧�?, gua:'瀹告垝绗傛稊鍙ョ瑓' },
+  { name:'婢垛晜杈扮仦?, symbol:'娴�?, desc:'鐏炪儴顢戠粈闂村崕閿涘苯鐨�韫囧啳鐨戦幈搴涒偓?, gua:'娑斿彞绗傞崗鎴滅瑓' },
+  { name:'閸︽澘銇夊▔?, symbol:'娴�?, desc:'闂冩挳妲奸崪灞芥値閿涘奔绔炬禍瀣╅叄闁�姘モ偓?, gua:'閸с倓绗傛稊鍙ョ瑓' },
+  { name:'婢垛晛婀撮崥?, symbol:'娴�?, desc:'闂傤厼顢ｆ稉宥夆偓姘剧礉鐎规粌鐣ф稉宥呯杹鐞涘被鈧�?, gua:'娑斿彞绗傞崸銈勭瑓' },
+  { name:'婢垛晝浼�閸氬奔姹�', symbol:'娴�?, desc:'閸氬苯绺鹃崥鍫濆�忛敍灞肩瑢娴滃搫鎮庢担婧库偓?, gua:'娑斿彞绗傜粋璁崇瑓' },
+  { name:'閻忣偄銇夋径褎婀�', symbol:'娴�?, desc:'婢堆嗗箯閹碘偓閺堝�涚礉娑撶増鏁规稊瀣�钖勯妴?, gua:'缁傝�崇瑐娑斿彞绗�' },
+  { name:'閸︽澘鍖楃拫?, symbol:'娴�?, desc:'鐠嬶箒娅勯崣妤冩抄閿涘本寮ч幏娑欏疮閵�?, gua:'閸с倓绗傞懝顔荤瑓' },
+  { name:'闂嗗嘲婀寸挒?, symbol:'娴�?, desc:'閹板�嬪亰鐎瑰�夌�伴敍灞肩矤鐎圭懓鍣�婢跺洢鈧�?, gua:'闂囧洣绗傞崸銈勭瑓' }
+];
+
+function castIching() {
+  const question = document.getElementById('ichingQuestion').value || '閺堫亜锝為崘娆忓徔娴ｆ挷绨ㄦい?;
+  
+  // Simulate 6 coin tosses for 6 lines (from bottom to top)
+  const lines = [];
+  let changeLines = [];
+  for (let i = 0; i < 6; i++) {
+    const coins = [Math.random() < 0.5, Math.random() < 0.5, Math.random() < 0.5];
+    const heads = coins.filter(Boolean).length;
+    // 0 heads = old yin (6), 3 heads = old yang (9), 1 head = young yin (8), 2 heads = young yang (7)
+    const value = heads === 0 ? 6 : heads === 3 ? 9 : heads === 1 ? 8 : 7;
+    lines.push(value);
+    if (value === 6 || value === 9) changeLines.push(i);
+  }
+  
+  // Determine the hexagram
+  const hexIdx = (lines.filter(l => l % 2 === 1).length * 7 + lines.filter(l => l % 2 === 0).length * 3) % 16;
+  const hexagram = HEXAGRAMS[hexIdx];
+  
+  // Determine changing line interpretation
+  const changeLine = changeLines.length > 0 ? changeLines[0] : -1;
+  const lineNames = ['閸掓繄鍩�','娴滃瞼鍩�','娑撳�屽煝','閸ユ稓鍩�','娴滄梻鍩�','娑撳﹦鍩�'];
+  
+  let masterWords = '';
+  switch(currentIchingMaster) {
+    case '閹毖勬�戦梹鑳�鈧�?: masterWords = `濮濄倕宕�${hexagram.name}閿�?{hexagram.desc}閵嗗倸宕风挒?{hexagram.gua}閵�?{changeLine >= 0 ? `${lineNames[changeLine]}閸旑煉绱濋崣妯烘躬閸忔湹鑵戦妴淇� : '閸忣厾鍩㈡稉宥呭З閿涘矂娼ょ憴鍌氬従閸欐ǜ鈧�?}閹碘偓闂傤喕绠ｆ禍瀣剁礉閺嶇懓鐔�瀹稿弶妯夐敍灞界杹妞ゅ搫銇夐弮鎯扳偓灞藉З閵嗕繖; break;
+    case '閺勫骸绺剧敮鍫㈠煑': masterWords = `闂冨灝璁ラ梽鈧�娴ｆ稏鈧�鍌氱繁${hexagram.name}娑撯偓閸楋讣绱�${hexagram.desc}閵嗗倸绺剧拠姘�鍨�閸楋附妲戦敍灞藉捶閺勫骸鍨�娴滃��顫嗛妴鍌涙煢娑撶粯鏂佺�硅棄绺鹃敍灞惧帥閹�韫�璐熼幀鈧�閿涘矁鍤滈張澶岊洿閹躲儯鈧�淇�; break;
+    case '閻滃嫮婀￠柆鎾绘毐': masterWords = `${hexagram.name}閸楋讣绱�${hexagram.desc}缁犫偓閸楁洝顕╃亸杈ㄦЦ${['閸掝偅鈧�銉�绱濈粵澶夎⒈婢�?,'閻╁瓨甯撮崘?,'缁嬪磭娼冮悙?,'閹靛彞閲滄禍鍝勫簻韫�?,'閸掝偆鈥栭弶?,'濞屸剝鐦洪惀?][hexIdx % 6]}閵嗗倷淇婃稉宥勪繆閻㈠彉缍橀敍灞惧灉鐏忚精顕╂径褏娅х拠婵勨偓淇�; break;
+  }
+  
+  document.getElementById('ichingResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:14px;color:var(--text-muted);margin-bottom:8px;">閹�銊╂６閿�?{question}</div>
+      <div style="font-size:48px;margin:8px 0;">${hexagram.symbol}</div>
+      <div style="font-size:22px;color:var(--gold);font-family:'Noto Serif SC',serif;">${hexagram.name}</div>
+      <div style="color:var(--text-muted);font-size:13px;">${hexagram.gua}</div>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:16px;">
+      <div style="margin-bottom:12px;">
+        ${lines.map((l, i) => `
+          <div class="yao-line">
+            <span class="yao-position">${lineNames[5-i]}</span>
+            <span class="yao-symbol ${l % 2 === 1 ? 'yao-yang' : 'yao-yin'}">${l % 2 === 1 ? '閳逛讲鏀ｉ埞浣叉敚閳�? : '閳�?閳逛讲鏀�'}</span>
+            <span style="color:var(--text-muted);font-size:11px;">${l === 6 ? '閳库�冲綁' : l === 9 ? '閳库�冲綁' : ''}</span>
+          </div>
+        `).join('')}
+      </div>
+      <p style="color:var(--gold);margin-bottom:8px;"><strong>棣冩�� ${currentIchingMaster} 瀵�鈧�缁�鐚寸窗</strong></p>
+      <p style="color:var(--text-secondary);">${masterWords}</p>
+      <p style="color:var(--text-muted);margin-top:12px;font-style:italic;">${hexagram.desc}</p>
+    </div>
+  `;
+  document.getElementById('ichingResult').classList.add('show');
+}
+
+// ========== Meditation ==========
+function startMeditation() {
+  if (meditationRunning) {
+    clearInterval(meditationTimer);
+    meditationRunning = false;
+    document.getElementById('medStartBtn').textContent = '缂佈呯敾缁傚懎娼�';
+    document.getElementById('medStatus').textContent = '瀹稿弶娈忛崑?;
+    return;
+  }
+  
+  meditationRunning = true;
+  document.getElementById('medStartBtn').textContent = '閳�?閺嗗倸浠�';
+  document.getElementById('medStatus').textContent = '棣冾潩 闂堟瑥绺剧粋鍛�娼楁稉?..';
+  
+  meditationTimer = setInterval(() => {
+    meditationSeconds++;
+    const m = String(Math.floor(meditationSeconds / 60)).padStart(2, '0');
+    const s = String(meditationSeconds % 60).padStart(2, '0');
+    document.getElementById('medTimer').textContent = `${m}:${s}`;
+    
+    // Breathe effect
+    const symbol = document.getElementById('medSymbol');
+    const breathe = Math.sin(meditationSeconds * 0.1) * 0.15 + 0.35;
+    symbol.style.opacity = breathe;
+    symbol.style.transform = `scale(${1 + Math.sin(meditationSeconds * 0.1) * 0.1})`;
+  }, 1000);
+}
+
+function resetMeditation() {
+  clearInterval(meditationTimer);
+  meditationRunning = false;
+  meditationSeconds = 0;
+  document.getElementById('medTimer').textContent = '00:00';
+  document.getElementById('medStartBtn').textContent = '瀵�鈧�婵�瀣�顩�閸�?;
+  document.getElementById('medStatus').textContent = '閻愮懓鍤�瀵�鈧�婵�瀣剁礉闂堟瑥绺剧粋鍛�娼�';
+  document.getElementById('medSymbol').style.opacity = '0.3';
+  document.getElementById('medSymbol').style.transform = 'scale(1)';
+}
+
+// ========== Incense ==========
+function burnIncense() {
+  const container = document.getElementById('incenseContainer');
+  const sticks = container.querySelectorAll('.incense-stick');
+  if (sticks.length >= 3) return;
+  
+  const div = document.createElement('div');
+  div.style.display = 'inline-block';
+  div.style.margin = '0 10px';
+  div.style.position = 'relative';
+  div.innerHTML = `
+    <div class="incense-stick" style="animation:glow 2s infinite ${sticks.length * 0.3}s;">
+      <div class="incense-smoke" style="animation-delay:${sticks.length * 0.5}s;"></div>
+      <div class="incense-smoke" style="animation-delay:${sticks.length * 0.5 + 1}s;left:60%;"></div>
+    </div>
+  `;
+  container.appendChild(div);
+  
+  // Remove after a while
+  setTimeout(() => {
+    if (div.parentNode) div.remove();
+  }, 8000);
+}
+
+// ========== Wish / Lamps ==========
+function loadLamps() {
+  const saved = localStorage.getItem('putiyuan_lamps');
+  lampData = saved ? JSON.parse(saved) : [];
+  renderLamps();
+  
+  const count = document.getElementById('lampCount');
+  if (count) count.textContent = 46 + lampData.length;
+}
+
+function renderLamps() {
+  const wall = document.getElementById('lampWall');
+  if (!wall) return;
+  
+  const allLamps = [...lampData, 
+    {from:'1**', to:'w**', type:'閺呯儤鍙庨悘?},
+    {from:'閸�?*', to:'鐠�?*', type:'闂�鍨�顕撮悘?},
+    {from:'閸�?*', to:'閺�?*', type:'楠炲啿鐣ㄩ悘?},
+    {from:'閸�?*', to:'閸�?*', type:'婵�鑽ょ喘閻�?},
+    {from:'閸�?*', to:'閺�?*', type:'閺呯儤鍙庨悘?},
+  ];
+  
+  wall.innerHTML = allLamps.slice(0, 20).map(l => `
+    <div class="lamp-item">
+      <div class="lamp-icon">棣冪崲</div>
+      <div class="lamp-from">${l.from}</div>
+      <div class="lamp-to">娑�?${l.to}</div>
+      <div class="lamp-type">${l.type}</div>
+    </div>
+  `).join('');
+}
+
+function lightLamp() {
+  const name = document.getElementById('wishName').value.trim();
+  const relation = document.getElementById('wishRelation').value;
+  const sender = document.getElementById('wishSender').value.trim() || '閸�?*';
+  const msg = document.getElementById('wishMessage').value.trim();
+  
+  if (!name) { alert('鐠囧嘲锝為崘娆忣啀娴滃搫顫橀崥?); return; }
+  
+  lampData.push({ from: sender, to: name, type: selectedLampType, relation, msg, time: new Date().toISOString() });
+  localStorage.setItem('putiyuan_lamps', JSON.stringify(lampData));
+  
+  renderLamps();
+  document.getElementById('lampCount').textContent = 46 + lampData.length;
+  
+  alert(`棣冪崲 ${selectedLampType}瀹歌弓璐熼幃銊у仯娴滎噯绱抃n娓氭稑顨庨弮鍫曟毐閿�?{selectedDuration}\n娓氭稑顨庨柌鎴︻杺閿涙��?{selectedPrice}\n\n濮濄倕濮涢懗鎴掕礋娴肩姷绮洪弬鍥у�叉禒顏勭础鐏炴洜銇氶妴鍌氱杽闂勫懍绶垫總澶庮嚞閼辨梻閮寸粻锛勬倞閸涙ǜ鈧�淇�);
+}
+
+// ========== Misc ==========
+function toggleMusic() {
+  alert('棣冾潩 缁傚懍鎱ㄩ棅鍏呯�伴崝鐔诲厴\n\n閸栧懎鎯堥敍姘舵寭绾绢剙褰滄稊鎰┾偓浣风稉閸欓攱鈷岄棅鐐解偓浣圭箒鐏炶鲸閭�濮樼⒍n\n閸欘垱鎸遍弨鎹愬殰閻掑墎娅ч崳顏堢叾鐢�顔煎И闂堟瑥绺剧粋鍛�娼楅妴?);
+}
+
+function shareSite() {
+  if (navigator.share) {
+    navigator.share({ title: '鑿╂彁鑻�?, text: '涓哄�朵汉绁堢�忓繑鐪伴悘鐢殿劮', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('闁剧偓甯村�告彃顦查崚璁圭礉閸欘垰鍨庢禍顐ょ舶婵傝棄寮�'));
+  }
+}
+
+// ========== Init ==========
+loadData();
+</script>
+</body>
+</html>
+

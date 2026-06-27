@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+  <meta name="description" content="心诚则灵。为家人点一盏祈福灯，求一支关帝灵签，看一卦命理八字。一念慈悲，福报自来。">
+  <meta name="keywords" content="菩提苑,祈福,求签,关帝灵签,八字精批,周公解梦,求灵签,看手相,看面相,命理">
+  <meta name="application-name" content="菩提苑">
+  <meta name="author" content="菩提苑">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1410">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="菩提苑">
+  <meta property="og:title" content="菩提苑 · 为家人祈福求灵签">
+  <meta property="og:description" content="心诚则灵。为家人点一盏祈福灯，求一支关帝灵签，看一卦命理八字。一念慈悲，福报自来。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="菩提苑">
+  <meta property="og:image" content="https://putiyuan.pages.dev/share-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>菩提苑 · 为家人祈福求灵签</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <script src="js/lunar.min.js"></script>
+  <script src="js/lunar-wrapper.js"></script>
+  <script>window.onerror=function(m,u,l){var d=document.getElementById("jserr");if(d)d.textContent=m+" line:"+l;}</script>
+</head>
+<body>
+
+<!-- Background Layers -->
+<div class="bg-layer bg-gradient"></div>
+<div class="bg-layer bg-mountain"></div>
+<div class="bg-layer bg-vignette"></div>
+<div class="bg-layer bg-glow-top"></div>
+<div class="bg-layer" id="particles"></div>
+
+<div id="jserr" style="position:fixed;bottom:0;left:0;right:0;background:red;color:white;z-index:99999;padding:10px;font-size:12px;">JS: OK</div>
+
+<header class="banner">
+  <div class="banner-inner">
+    <div class="logo">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 6 C 22 6, 12 12, 10 22 C 8 32, 14 44, 24 50 C 28 53, 30 56, 31 60 L 32 62 L 33 60 C 34 56, 36 53, 40 50 C 50 44, 56 32, 54 22 C 52 12, 42 6, 32 6 Z" fill="currentColor" fill-opacity="0.12"/>
+        <path d="M32 8 V 60" stroke-width="1.4"/>
+        <path d="M32 16 C 26 18, 20 22, 16 28"/>
+        <path d="M32 16 C 38 18, 44 22, 48 28"/>
+        <path d="M32 28 C 24 30, 18 36, 16 42"/>
+        <path d="M32 28 C 40 30, 46 36, 48 42"/>
+        <path d="M32 42 C 28 46, 26 50, 26 54"/>
+        <path d="M32 42 C 36 46, 38 50, 38 54"/>
+      </svg>
+      <span class="logo-text" onclick="navigate('home')" style="cursor:pointer;">菩提苑</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <nav class="banner-nav" id="mainNav">
+    <a href="#wish" onclick="navigate('wish')">为家人祈福</a>
+    <a href="#calendar" onclick="navigate('calendar')">今日黄历</a>
+    <a href="#divination" onclick="navigate('divination')">求灵签</a>
+    <a href="#bazi" onclick="navigate('bazi')">八字精批</a>
+    <a href="#dreams" onclick="navigate('dreams')">周公解梦</a>
+    <a href="#palm" onclick="navigate('palm')">手相 / 面相</a>
+    <a href="#naming" onclick="navigate('naming')">宝宝起名</a>
+    <a href="#iching" onclick="navigate('iching')">六爻占卜</a>
+    <a href="#meditation" onclick="navigate('meditation')">静心禅坐</a>
+  </nav>
+  <div class="banner-actions">
+    <button class="btn-icon" onclick="toggleMusic()" title="禅修音乐">🎵</button>
+    <button class="btn-icon" onclick="alert('可将此页面添加至桌面，方便日常使用。')" title="添加到桌面">📥</button>
+    <div class="profile-badge">👤 莲华603</div>
+  </div>
+ </div>
+</header>
+
+<main class="main-content">
+
+<!-- HOME -->
+<section class="page-section active" id="page-home">
+  <div class="hero">
+    <div class="hero-logo">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold);">
+        <path d="M32 6 C 22 6, 12 12, 10 22 C 8 32, 14 44, 24 50 C 28 53, 30 56, 31 60 L 32 62 L 33 60 C 34 56, 36 53, 40 50 C 50 44, 56 32, 54 22 C 52 12, 42 6, 32 6 Z" fill="currentColor" fill-opacity="0.12"/>
+        <path d="M32 8 V 60" stroke-width="1.4"/>
+        <path d="M32 16 C 26 18, 20 22, 16 28"/>
+        <path d="M32 16 C 38 18, 44 22, 48 28"/>
+        <path d="M32 28 C 24 30, 18 36, 16 42"/>
+        <path d="M32 28 C 40 30, 46 36, 48 42"/>
+        <path d="M32 42 C 28 46, 26 50, 26 54"/>
+        <path d="M32 42 C 36 46, 38 50, 38 54"/>
+      </svg>
+      <span class="ring"></span>
+      <span class="ring"></span>
+    </div>
+    <h1>菩提苑</h1>
+    <p>以古籍为根，以真人感解读为用<br>心愿供灯 · 传统签谱 · 看八字</p>
+    <div class="hero-cta">
+      <a href="javascript:navigate('wish')" class="btn-hero btn-hero-primary">🪷 心愿供灯</a>
+      <a href="javascript:navigate('bazi')" class="btn-hero btn-hero-secondary">☯ 八字精批</a>
+    </div>
+    <div class="scroll-hint">↓ 向下滚动 · 看更多功德</div>
+  </div>
+
+  <h2 class="section-title">九大善门</h2>
+  <div class="feature-grid">
+    <a class="feature-card" href="javascript:navigate('wish')">
+      <div class="feature-icon">🪔</div>
+      <h3>心愿供灯</h3>
+      <p>点一盏灯，写下一份祝愿。适合生日纪念、平安祝福、学业心愿。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('calendar')">
+      <div class="feature-icon">📅</div>
+      <h3>今日黄历</h3>
+      <p>干支宜忌、神煞冲煞、十二时辰，传统择吉一目了然。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('dreams')">
+      <div class="feature-icon">💤</div>
+      <h3>周公解梦</h3>
+      <p>百梦皆有意，古今相参证。80 余条经典梦境，直接告诉您吉凶。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('divination')">
+      <div class="feature-icon">🎋</div>
+      <h3>传统签谱</h3>
+      <p>一签一事，100 支签文整理自传统签谱，为当前事项提供文化参考。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('bazi')">
+      <div class="feature-icon">🪐</div>
+      <h3>八字精批</h3>
+      <p>立春节气真排盘，看命格根骨与一生气运起伏。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('iching')">
+      <div class="feature-icon">☯</div>
+      <h3>周易卦象</h3>
+      <p>心起一念，三铜起卦，看本卦、互卦、变卦，为当前事项补一版卦象参考。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('palm')">
+      <div class="feature-icon">✋</div>
+      <h3>手相 / 面相</h3>
+      <p>上传掌心照或正脸照，围绕图上可见特征逐段分析。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('naming')">
+      <div class="feature-icon">👶</div>
+      <h3>宝宝起名</h3>
+      <p>结合八字喜忌、音韵笔画、典故诗词，给孩子一个耐看的名字。</p>
+    </a>
+    <a class="feature-card" href="javascript:navigate('meditation')">
+      <div class="feature-icon">🧘</div>
+      <h3>静心禅坐</h3>
+      <p>钟磬古乐、佛号梵音、深山溪水。日日一坐，让自己慢下来。</p>
+    </a>
+  </div>
+
+  <div class="why-section">
+    <h2>为何选菩提苑</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon">📜</div>
+        <h4>古籍为据</h4>
+        <p>签谱、卦辞皆整理自传统古籍，溯本清源。</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">🧮</div>
+        <h4>真排盘</h4>
+        <p>八字以立春节气为界，非月初一派。排盘严谨。</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">🎭</div>
+        <h4>多风格解读</h4>
+        <p>可选不同风格的"师父"开示，总有一款契合您的心境。</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">🔒</div>
+        <h4>隐私保护</h4>
+        <p>您提交的信息仅用于本次解读，不存储不外传。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="incense-section" id="incenseSection">
+    <h2>🙏 在线上香</h2>
+    <p>敬上一炷清香，祈愿平安吉祥</p>
+    <div class="incense-container" id="incenseContainer"></div>
+    <button class="incense-btn" onclick="burnIncense()">敬上一炷清香</button>
+  </div>
+
+  <div class="share-section">
+    <h2>分享给家人 · 一起记录心愿</h2>
+    <p>将菩提苑分享给亲朋好友，一起为家人祈福</p>
+    <button class="share-btn" onclick="shareSite()">📤 分享给好友</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="alert('用户协议：本平台内容仅供传统文化参考，不构成任何建议。')">用户协议</a>
+      <a href="javascript:void(0)" onclick="alert('隐私说明：您主动输入的信息仅用于本次功能运行，不会存储到服务器。')">隐私说明</a>
+      <a href="javascript:void(0)" onclick="alert('AI 生成说明：部分解读内容由 AI 模型生成，请结合现实情况判断。')">AI 生成说明</a>
+    </div>
+    <p>菩提苑 · 为家人祈福求灵签 · 仅供传统文化参考</p>
+  </footer>
+</section>
+<!-- WISH -->
+<section class="page-section" id="page-wish">
+  <div class="page-header">
+    <h1>🪔 心愿供灯</h1>
+    <p class="subtitle">点一盏灯，写下一份祝愿，留给家人、自己或重要时刻一份温和的仪式感</p>
+    <div style="margin-top:12px;color:var(--text-muted);font-size:14px;">
+      已点亮 <span id="lampCount" style="color:var(--gold)">46</span> 盏 ·
+      今日新增 <span id="lampToday" style="color:var(--gold)">0</span> 盏
+    </div>
+  </div>
+  <div class="lamp-wall" id="lampWall"></div>
+  <div class="card" style="margin-top:24px;">
+    <h3 style="color:var(--gold);margin-bottom:16px;">🕯 为谁点灯</h3>
+    <div class="form-group">
+      <label class="form-label">家人姓名</label>
+      <input class="form-input" id="wishName" placeholder="输入家人姓名">
+    </div>
+    <div class="form-group">
+      <label class="form-label">与您的关系</label>
+      <select class="form-select" id="wishRelation">
+        <option>父亲</option><option>母亲</option><option>爱人</option>
+        <option>孩子</option><option>孙辈</option><option>朋友</option><option>自己</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">选一盏灯</label>
+      <div class="chip-group" id="lampTypeGroup">
+        <span class="chip selected" data-type="清心灯">清心灯 🕊️</span>
+        <span class="chip" data-type="智慧灯">智慧灯 📚</span>
+        <span class="chip" data-type="长寿灯">长寿灯 🌿</span>
+        <span class="chip" data-type="平安灯">平安灯 🛡️</span>
+        <span class="chip" data-type="姻缘灯">姻缘灯 ❤️</span>
+        <span class="chip" data-type="财福灯">财福灯 💰</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">供奉时长</label>
+      <div class="chip-group" id="lampDurationGroup">
+        <span class="chip selected" data-duration="一月供奉" data-price="3.9">一月供奉 ¥3.9</span>
+        <span class="chip" data-duration="百日供奉" data-price="5.9">百日供奉 ¥5.9</span>
+        <span class="chip" data-duration="一年供奉" data-price="9.9">一年供奉 ¥9.9</span>
+        <span class="chip" data-duration="永久长明" data-price="19.9">永久长明 ¥19.9</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">心愿（可选，最多80字）</label>
+      <textarea class="form-input" id="wishMessage" maxlength="80" placeholder="写下您的心愿..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">您的称呼（可选，会显示在灯墙）</label>
+      <input class="form-input" id="wishSender" placeholder="如：善信 或 您的名字">
+    </div>
+    <div style="text-align:center;margin:16px 0;">
+      需供奉 <span class="price-tag" id="wishPrice">¥3.9</span>
+    </div>
+    <button class="btn-primary" onclick="lightLamp()">🪔 点亮此灯</button>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="page-section" id="page-calendar">
+  <div class="page-header">
+    <h1>📅 今日黄历</h1>
+    <p class="subtitle">干支宜忌 · 神煞冲煞 · 十二时辰</p>
+  </div>
+  <div class="card">
+    <div class="cal-header">
+      <button class="cal-nav-btn" onclick="changeDay(-1)">◀ 前一天</button>
+      <div><h2 id="calTitle">--</h2><div class="cal-sub" id="calSub">--</div></div>
+      <button class="cal-nav-btn" onclick="changeDay(1)">后一天 ▶</button>
+    </div>
+    <div class="cal-day-badge shangshang" id="calBadge">
+      <div class="day-level" id="calLevel">上上</div>
+      <div class="day-desc" id="calDesc">诸事大吉</div>
+      <div class="day-lunar" id="calLunar">--</div>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-col">
+        <h3>宜 · 今日适合</h3>
+        <div class="cal-tags" id="calYi"></div>
+      </div>
+      <div class="cal-col">
+        <h3>忌 · 今日避开</h3>
+        <div class="cal-tags" id="calJi"></div>
+      </div>
+    </div>
+    <div class="cal-grid" style="margin-top:16px;">
+      <div class="cal-col">
+        <h3>神煞 · 冲煞</h3>
+        <div id="calShensha" class="cal-detail-grid"></div>
+      </div>
+      <div class="cal-col">
+        <h3>时辰吉凶</h3>
+        <table class="shichen-table" id="calShichen"><tbody></tbody></table>
+      </div>
+    </div>
+    <h3 style="color:var(--gold);margin:20px 0 12px;font-size:16px;">未来七日</h3>
+    <div class="week-forecast" id="weekForecast"></div>
+  </div>
+</section>
+
+<!-- DIVINATION -->
+<section class="page-section" id="page-divination">
+  <div class="page-header">
+    <h1>🎋 关帝灵签</h1>
+    <p class="subtitle">心诚则灵 · 默念所求 · 抽一支签</p>
+    <div style="margin-top:8px;color:var(--text-muted);font-size:13px;">今日免费 1/1 次</div>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">请选一位师父为您开示</label>
+      <div class="master-grid" id="masterSelect">
+        <div class="master-card selected" data-master="慧明长老" onclick="selectMaster(this,'慧明长老')">
+          <div class="master-avatar">🧘</div>
+          <div class="master-name">慧明长老</div>
+          <div class="master-title">古寺住持</div>
+          <div class="master-desc">庄重持重，引经据典</div>
+        </div>
+        <div class="master-card" data-master="明心师父" onclick="selectMaster(this,'明心师父')">
+          <div class="master-avatar">🙏</div>
+          <div class="master-name">明心师父</div>
+          <div class="master-title">尼众法师</div>
+          <div class="master-desc">慈悲温柔，劝人向善</div>
+        </div>
+        <div class="master-card" data-master="玄真道长" onclick="selectMaster(this,'玄真道长')">
+          <div class="master-avatar">☯️</div>
+          <div class="master-name">玄真道长</div>
+          <div class="master-title">山中道人</div>
+          <div class="master-desc">直爽通透，说大白话</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">写下您要问的事</label>
+      <input class="form-input" id="qianQuestion" placeholder="例如：家人身体能否安康？">
+    </div>
+    <button class="btn-primary" onclick="drawQian()">🎋 默念所求 · 求一支签</button>
+    <div class="result-box" id="qianResult"></div>
+  </div>
+</section>
+<!-- BAZI -->
+<section class="page-section" id="page-bazi">
+  <div class="page-header">
+    <h1>🪐 八字精批</h1>
+    <p class="subtitle">输入生辰，真排盘、看格局、看大运、看建议</p>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">请选一位师父为您开示</label>
+      <div class="master-grid" id="baziMasterSelect">
+        <div class="master-card selected" data-master="慧明长老" onclick="selectBaziMaster(this,'慧明长老')">
+          <div class="master-avatar">🧘</div>
+          <div class="master-name">慧明长老</div>
+          <div class="master-title">古寺住持</div>
+          <div class="master-desc">庄重持重，引经据典</div>
+        </div>
+        <div class="master-card" data-master="明心师父" onclick="selectBaziMaster(this,'明心师父')">
+          <div class="master-avatar">🙏</div>
+          <div class="master-name">明心师父</div>
+          <div class="master-title">尼众法师</div>
+          <div class="master-desc">慈悲温柔，劝人向善</div>
+        </div>
+        <div class="master-card" data-master="玄真道长" onclick="selectBaziMaster(this,'玄真道长')">
+          <div class="master-avatar">☯️</div>
+          <div class="master-name">玄真道长</div>
+          <div class="master-title">山中道人</div>
+          <div class="master-desc">直爽通透，说大白话</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">出生年</label>
+        <input class="form-input" id="baziYear" type="number" value="1990" min="1900" max="2030">
+      </div>
+      <div class="form-group">
+        <label class="form-label">出生月</label>
+        <input class="form-input" id="baziMonth" type="number" value="6" min="1" max="12">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">出生日</label>
+        <input class="form-input" id="baziDay" type="number" value="15" min="1" max="31">
+      </div>
+      <div class="form-group">
+        <label class="form-label">出生时辰</label>
+        <select class="form-select" id="baziHour">
+          <option value="0">子时 (23:00-01:00)</option>
+          <option value="1">丑时 (01:00-03:00)</option>
+          <option value="2">寅时 (03:00-05:00)</option>
+          <option value="3">卯时 (05:00-07:00)</option>
+          <option value="4">辰时 (07:00-09:00)</option>
+          <option value="5">巳时 (09:00-11:00)</option>
+          <option value="6">午时 (11:00-13:00)</option>
+          <option value="7" selected>未时 (13:00-15:00)</option>
+          <option value="8">申时 (15:00-17:00)</option>
+          <option value="9">酉时 (17:00-19:00)</option>
+          <option value="10">戌时 (19:00-21:00)</option>
+          <option value="11">亥时 (21:00-23:00)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">性别</label>
+      <div class="chip-group" id="baziGenderGroup">
+        <span class="chip selected" onclick="selectGender(this,'male')">男</span>
+        <span class="chip" onclick="selectGender(this,'female')">女</span>
+      </div>
+    </div>
+    <div style="color:var(--text-muted);font-size:12px;margin-bottom:16px;">
+      仅作传统文化参考，请结合现实情况判断；未满18周岁请勿使用本服务。
+    </div>
+    <button class="btn-primary" onclick="analyzeBazi()">☯ 开始真排盘</button>
+    <div class="result-box" id="baziResult"></div>
+  </div>
+</section>
+
+<!-- DREAMS -->
+<section class="page-section" id="page-dreams">
+  <div class="page-header">
+    <h1>💤 周公解梦</h1>
+    <p class="subtitle">百梦皆有意 · 古今相参证</p>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">请描述您梦中所见</label>
+      <input class="form-input" id="dreamSearch" placeholder="如:梦见龙、梦见牙齿掉了" onkeyup="if(event.key==='Enter')searchDream()">
+    </div>
+    <button class="btn-primary" onclick="searchDream()">🔍 解梦</button>
+    <div class="result-box" id="dreamResult"></div>
+    <h3 style="color:var(--gold);margin:24px 0 12px;">按类查梦</h3>
+    <div class="dream-cats" id="dreamCats"></div>
+    <h3 style="color:var(--gold);margin:24px 0 12px;">热门梦境</h3>
+    <div class="dream-list" id="dreamList"></div>
+  </div>
+</section>
+
+<!-- PALM -->
+<section class="page-section" id="page-palm">
+  <div class="page-header">
+    <h1>✋ 手相 / 面相</h1>
+    <p class="subtitle">上传掌心照或正脸照，围绕图上可见特征逐段分析</p>
+  </div>
+  <div class="card">
+    <p style="text-align:center;color:var(--text-muted);padding:40px 20px;">
+      🖼️ 此功能支持上传照片进行 AI 分析<br><br>
+      先预览再解锁完整详批，敬请期待完整版。
+    </p>
+    <div class="form-group">
+      <label class="form-label">选择分析类型</label>
+      <div class="chip-group">
+        <span class="chip selected">手相</span>
+        <span class="chip">面相</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">上传照片</label>
+      <div style="border:2px dashed var(--border);border-radius:8px;padding:30px;text-align:center;color:var(--text-muted);cursor:pointer;">
+        📸 点击上传照片（此功能开发中）
+      </div>
+    </div>
+    <button class="btn-primary" disabled>开始分析 (即将开放)</button>
+  </div>
+</section>
+<!-- NAMING -->
+<section class="page-section" id="page-naming">
+  <div class="page-header">
+    <h1>👶 宝宝起名</h1>
+    <p class="subtitle">结合八字喜忌、音韵笔画、典故诗词，给孩子一个耐看的名字</p>
+  </div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">出生年</label>
+        <input class="form-input" id="nameYear" type="number" value="2026" min="2020" max="2030">
+      </div>
+      <div class="form-group">
+        <label class="form-label">出生月</label>
+        <input class="form-input" id="nameMonth" type="number" value="6" min="1" max="12">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-group">
+        <label class="form-label">出生日</label>
+        <input class="form-input" id="nameDay" type="number" value="15" min="1" max="31">
+      </div>
+      <div class="form-group">
+        <label class="form-label">出生时辰</label>
+        <select class="form-select" id="nameHour">
+          <option value="0">子时</option><option value="1">丑时</option>
+          <option value="2">寅时</option><option value="3">卯时</option>
+          <option value="4">辰时</option><option value="5">巳时</option>
+          <option value="6">午时</option><option value="7">未时</option>
+          <option value="8">申时</option><option value="9">酉时</option>
+          <option value="10">戌时</option><option value="11">亥时</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">姓氏</label>
+      <input class="form-input" id="nameSurname" placeholder="如：张、李、王" maxlength="4">
+    </div>
+    <div class="form-group">
+      <label class="form-label">性别</label>
+      <div class="chip-group">
+        <span class="chip selected" onclick="selectNamingGender(this,'male')">男</span>
+        <span class="chip" onclick="selectNamingGender(this,'female')">女</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">名字长度</label>
+      <div class="chip-group" id="nameLengthGroup">
+        <span class="chip selected" onclick="selectNameLength(this,2)">两字名</span>
+        <span class="chip" onclick="selectNameLength(this,3)">三字名</span>
+        <span class="chip" onclick="selectNameLength(this,4)">四字名</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">风格倾向（可选，最多选3项）</label>
+      <div class="chip-group" id="nameStyleGroup">
+        <span class="chip" data-style="典雅">典雅典雅</span>
+        <span class="chip" data-style="大气">大气</span>
+        <span class="chip" data-style="文艺">文艺</span>
+        <span class="chip" data-style="自然">自然</span>
+        <span class="chip" data-style="传统">传统</span>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="startNaming()">👶 开始起名</button>
+    <div class="result-box" id="namingResult"></div>
+  </div>
+</section>
+
+<!-- ICHING -->
+<section class="page-section" id="page-iching">
+  <div class="page-header">
+    <h1>☯ 周易卦象</h1>
+    <p class="subtitle">心起一念，三铜起卦，得卦象参考</p>
+  </div>
+  <div class="card">
+    <div class="form-group">
+      <label class="form-label">请选一位师父为您开示</label>
+      <div class="master-grid" id="ichingMasterSelect">
+        <div class="master-card selected" data-master="慧明长老" onclick="selectIchingMaster(this,'慧明长老')">
+          <div class="master-avatar">🧘</div>
+          <div class="master-name">慧明长老</div>
+          <div class="master-title">古寺住持</div>
+          <div class="master-desc">庄重持重，引经据典</div>
+        </div>
+        <div class="master-card" data-master="明心师父" onclick="selectIchingMaster(this,'明心师父')">
+          <div class="master-avatar">🙏</div>
+          <div class="master-name">明心师父</div>
+          <div class="master-title">尼众法师</div>
+          <div class="master-desc">慈悲温柔，劝人向善</div>
+        </div>
+        <div class="master-card" data-master="玄真道长" onclick="selectIchingMaster(this,'玄真道长')">
+          <div class="master-avatar">☯️</div>
+          <div class="master-name">玄真道长</div>
+          <div class="master-title">山中道人</div>
+          <div class="master-desc">直爽通透，说大白话</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">写下您要问的事</label>
+      <input class="form-input" id="ichingQuestion" placeholder="例如：事业发展如何？">
+    </div>
+    <button class="btn-primary" onclick="castIching()">☯ 三铜起卦</button>
+    <div class="result-box" id="ichingResult"></div>
+  </div>
+</section>
+
+<!-- MEDITATION -->
+<section class="page-section" id="page-meditation">
+  <div class="page-header">
+    <h1>🧘 静心禅坐</h1>
+    <p class="subtitle">钟磬古乐、佛号梵音、深山溪水</p>
+  </div>
+  <div class="card">
+    <div class="meditation-area">
+      <div class="meditation-symbol" id="medSymbol">☸</div>
+      <div class="meditation-timer" id="medTimer">00:00</div>
+      <p id="medStatus" style="color:var(--text-muted);margin-bottom:16px;">点击开始，静心禅坐</p>
+      <div class="meditation-controls">
+        <button class="btn-primary" id="medStartBtn" onclick="startMeditation()" style="max-width:200px;">开始禅坐</button>
+        <button class="btn-hero btn-hero-secondary" onclick="resetMeditation()" style="max-width:200px;padding:14px 24px;">重置</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<button class="floating-share" onclick="shareSite()" title="分享">📤</button>
+<script>
+// ========== SPA Navigation ==========
+function navigate(page) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.getElementById('mainNav').classList.remove('open');
+}
+
+function toggleNav() {
+  document.getElementById('mainNav').classList.toggle('open');
+}
+
+// ========== Constants (from wrapper) ==========
+
+
+
+
+// ========== Data ==========
+let QIAN_DATA = [];
+let DREAM_DATA = [];
+let currentMaster = '慧明长老';
+let currentBaziMaster = '慧明长老';
+let currentIchingMaster = '慧明长老';
+let currentGender = 'male';
+let namingGender = 'male';
+let namingLength = 2;
+let namingStyles = [];
+let selectedLampType = '清心灯';
+let selectedDuration = '一月供奉';
+let selectedPrice = 3.9;
+let calendarDate = new Date();
+let meditationTimer = null;
+let meditationSeconds = 0;
+let meditationRunning = false;
+let lampData = [];
+
+async function loadData() {
+  try {
+    const qianResp = await fetch('data/qian.json');
+    QIAN_DATA = await qianResp.json();
+    const dreamResp = await fetch('data/dreams.json');
+    DREAM_DATA = await dreamResp.json();
+    initDreams();
+    renderCalendar();
+    loadLamps();
+  } catch(e) {}
+}
+
+// ========== Calendar ==========
+function changeDay(delta) {
+  calendarDate.setDate(calendarDate.getDate() + delta);
+  renderCalendar();
+}
+
+function renderCalendar() {
+  const d = calendarDate;
+  const lunar = getLunarDate(d.getFullYear(), d.getMonth() + 1, d.getDate());
+  
+  document.getElementById('calTitle').textContent = `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+  document.getElementById('calSub').textContent = `${lunar.weekDay} · 农历${lunar.monthName}${lunar.dayName}`;
+  document.getElementById('calLevel').textContent = lunar.level;
+  document.getElementById('calDesc').textContent = `今日 · ${lunar.level} · 宜${lunar.yi.slice(0,2).join('、')}`;
+  document.getElementById('calLunar').textContent = `干支：${lunar.ganzhiYear}年 ${lunar.ganzhiMonth}月 ${lunar.ganzhiDay}日 (${lunar.shengxiao}年)`;
+  
+  const badge = document.getElementById('calBadge');
+  badge.className = 'cal-day-badge ' + (lunar.level.includes('上') ? 'shangshang' : lunar.level.includes('中') ? 'zhongji' : 'xiaxia');
+  
+  document.getElementById('calYi').innerHTML = lunar.yi.filter(y => y !== '---').map(y => `<span class="cal-tag yi">${y}</span>`).join('');
+  document.getElementById('calJi').innerHTML = lunar.ji.filter(y => y !== '---').map(y => `<span class="cal-tag ji">${y}</span>`).join('');
+  
+  const ss = lunar.shensha;
+  document.getElementById('calShensha').innerHTML = `
+    <div class="cal-detail-label">吉神宜趋</div><div class="cal-detail-value">${(ss['吉神宜趋']||[]).join('、')}</div>
+    <div class="cal-detail-label">凶神宜避</div><div class="cal-detail-value">${(ss['凶神宜避']||[]).join('、')}</div>
+    <div class="cal-detail-label">冲煞</div><div class="cal-detail-value">${ss['冲煞']||''}</div>
+    <div class="cal-detail-label">胎神方位</div><div class="cal-detail-value">${ss['胎神方位']||''}</div>
+    <div class="cal-detail-label">28宿</div><div class="cal-detail-value">${ss['28宿']||''} · ${ss['宿吉凶']||''}</div>
+    <div class="cal-detail-label">12建除</div><div class="cal-detail-value">${ss['12建除']||''}</div>
+  `;
+  
+  document.querySelector('#calShichen tbody').innerHTML = lunar.shichen.map(sc => `
+    <tr><td>${sc.name}</td><td>${sc.gan}${sc.zhi}</td><td>冲：${sc.chong}</td><td>${sc.luck}</td></tr>
+  `).join('');
+  
+  document.getElementById('weekForecast').innerHTML = lunar.weekForecast.map(wf => `
+    <div class="week-day">
+      <div class="wd-name">${wf.weekDay}</div>
+      <div class="wd-day">${wf.lunarDay}</div>
+      <div class="wd-level ${wf.level.includes('上')?'shangshang':wf.level.includes('中')?'zhongji':'xiaxia'}">${wf.level}</div>
+    </div>
+  `).join('');
+}
+// ========== Divination ==========
+function selectMaster(el, name) {
+  document.querySelectorAll('#masterSelect .master-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  currentMaster = name;
+}
+
+function drawQian() {
+  const qian = QIAN_DATA[Math.floor(Math.random() * QIAN_DATA.length)];
+  const question = document.getElementById('qianQuestion').value || '未填写具体事项';
+  
+  let masterWords = '';
+  switch(currentMaster) {
+    case '慧明长老': masterWords = `此签为${qian.type}之兆。签题「${qian.title}」。经文云：${qian.text}。《易》云：观乎天文，以察时变；观乎人文，以化成天下。此签所应，于你之事，当以静心体察为主。`; break;
+    case '明心师父': masterWords = `阿弥陀佛。施主求得${qian.type}签「${qian.title}」。${qian.poem}心诚则灵，一切随缘。放宽心，自有善果。`; break;
+    case '玄真道长': masterWords = `${qian.type}签！「${qian.title}」。说白话：${qian.interp}。信则有，不信则无，自己琢磨。`; break;
+  }
+  
+  document.getElementById('qianResult').innerHTML = `
+    <div style="text-align:center;">
+      <div class="qian-number">第 ${qian.id} 签 · <span class="qian-type ${qian.type.includes('上')?'shangshang':qian.type.includes('中')?'zhong':'xia'}">${qian.type}</span></div>
+      <div style="font-size:20px;color:var(--gold);font-family:'Noto Serif SC',serif;margin-bottom:8px;">${qian.title}</div>
+      <div class="qian-text">${qian.text}</div>
+      <div style="color:var(--text-muted);font-size:13px;margin-bottom:12px;">${qian.poem}</div>
+      <div style="color:var(--text-muted);font-size:12px;margin-bottom:16px;">所问：${question}</div>
+      <div style="border-top:1px solid var(--border);padding-top:16px;">
+        <p style="color:var(--gold);margin-bottom:8px;"><strong>🙏 ${currentMaster} 开示：</strong></p>
+        <p style="color:var(--text-secondary);">${masterWords}</p>
+        <p style="color:var(--text-muted);margin-top:12px;font-style:italic;">${qian.interp}</p>
+      </div>
+    </div>
+  `;
+  document.getElementById('qianResult').classList.add('show');
+}
+
+// ========== Bazi ==========
+function selectBaziMaster(el, name) {
+  document.querySelectorAll('#baziMasterSelect .master-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  currentBaziMaster = name;
+}
+
+function selectGender(el, gender) {
+  document.querySelectorAll('#baziGenderGroup .chip').forEach(function(c) { c.classList.remove('selected'); });
+  el.classList.add('selected');
+  currentGender = gender;
+}
+
+function analyzeBazi() {
+  const year = parseInt(document.getElementById('baziYear').value) || 1990;
+  const month = parseInt(document.getElementById('baziMonth').value) || 6;
+  const day = parseInt(document.getElementById('baziDay').value) || 15;
+  const hourIdx = parseInt(document.getElementById('baziHour').value) || 0;
+  
+  const lunar = getLunarDate(year, month, day);
+  const dayGan = lunar.ganzhiDay[0];
+  const dayGanIdx = TIAN_GAN.indexOf(dayGan);
+  const wuxing = ['木','木','火','火','土','土','金','金','水','水'];
+  const dayMaster = ['甲木','乙木','丙火','丁火','戊土','己土','庚金','辛金','壬水','癸水'][dayGanIdx];
+  
+  const hourStemStart = [0, 2, 4, 6, 8][dayGanIdx % 5]; // 五鼠遁: 甲己→甲,乙庚→丙,丙辛→戊,丁壬→庚,戊癸→壬
+  const hourGan = (hourStemStart + hourIdx) % 10;
+  const hourGanzhi = TIAN_GAN[hourGan] + DI_ZHI[hourIdx];
+  
+  let analysis = '';
+  let advice = '';
+  switch(currentBaziMaster) {
+    case '慧明长老':
+      analysis = `此命日主为${dayMaster}，生于${lunar.ganzhiMonth}月。依《渊海子平》论之，日坐${wuxing[lunar.ganzhiDay[1] % 10 === 0 ? 0 : 1]}，时柱暗藏${wuxing[hourIdx % 10]}气。命格根基${['旺','稳','平','弱','偏弱'][dayGanIdx % 5]}，宜${['补木','补水','补木火','补火土','补土金','补金水','补土','补火','补金','补木火'][dayGanIdx]}为用。`;
+      advice = '大运走势：早年运势平稳，中年后渐入佳境。当前所行大运，宜静观其变，不宜冒进。求财宜稳，求名宜实。';
+      break;
+    case '明心师父':
+      analysis = `阿弥陀佛。施主命盘${dayMaster}为身，${lunar.ganzhiMonth}为令。日主温和，五行流转有情。家庭宫位和睦，感情线上有吉星照拂。`;
+      advice = '慈悲为怀，福报自来。施主心性善良，命中自有贵人护佑。放宽心态，一切自有安排。多行善事，莫问前程。';
+      break;
+    case '玄真道长':
+      analysis = `说人话：你这命${dayMaster}，生在${lunar.ganzhiMonth}月。八字排开一看——${['不错','还行','凑合','有点弱','够呛'][dayGanIdx % 5]}。日主${['偏旺','旺相','中和','偏弱','太弱'][dayGanIdx % 5]}，${['木多','火旺','土厚','金强','水旺'][dayGanIdx % 5]}是特点。`;
+      advice = `直说建议：${['多去水边走走','少熬夜伤肝','注意肠胃','多锻炼','控制脾气'][dayGanIdx % 5]}。事业上别贪快，稳着来。过了${40 + (dayGanIdx * 2)}岁这关，后面就好走了。`;
+      break;
+  }
+  
+  document.getElementById('baziResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:14px;color:var(--text-muted);margin-bottom:8px;">八字排盘</div>
+      <div class="bazi-grid">
+        <div class="bazi-cell"><div class="bazi-pillar">年柱</div><div class="bazi-heaven">${lunar.ganzhiYear[0]}</div><div class="bazi-earth">${lunar.ganzhiYear[1]}</div></div>
+        <div class="bazi-cell"><div class="bazi-pillar">月柱</div><div class="bazi-heaven">${lunar.ganzhiMonth[0]}</div><div class="bazi-earth">${lunar.ganzhiMonth[1]}</div></div>
+        <div class="bazi-cell"><div class="bazi-pillar">日柱</div><div class="bazi-heaven">${lunar.ganzhiDay[0]}</div><div class="bazi-earth">${lunar.ganzhiDay[1]}</div></div>
+        <div class="bazi-cell"><div class="bazi-pillar">时柱</div><div class="bazi-heaven">${hourGanzhi[0]}</div><div class="bazi-earth">${hourGanzhi[1]}</div></div>
+      </div>
+      <div style="color:var(--text-muted);font-size:13px;margin-top:4px;">
+        日主：<span style="color:var(--gold)">${dayMaster}</span> · 
+        生肖：<span style="color:var(--gold)">${lunar.shengxiao}</span> · 
+        五行：${lunar.ganzhiYear[0]}${lunar.ganzhiYear[1]}年
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:16px;">
+      <p style="color:var(--gold);margin-bottom:8px;"><strong>🙏 ${currentBaziMaster} 开示：</strong></p>
+      <p style="color:var(--text-secondary);">${analysis}</p>
+      <p style="color:var(--text-secondary);margin-top:12px;">${advice}</p>
+    </div>
+  `;
+  document.getElementById('baziResult').classList.add('show');
+}
+// ========== Dreams ==========
+function initDreams() {
+  if (!DREAM_DATA.length) return;
+  const cats = [...new Set(DREAM_DATA.map(d => d.cat))];
+  document.getElementById('dreamCats').innerHTML = '<span class="dream-cat-btn active" onclick="filterDreams(\'all\',this)">全部</span>' +
+    cats.map(c => `<span class="dream-cat-btn" onclick="filterDreams('${c}',this)">${c}</span>`).join('');
+  renderDreams(DREAM_DATA);
+}
+
+function renderDreams(data) {
+  document.getElementById('dreamList').innerHTML = data.map(d => `
+    <div class="dream-item" onclick="showDreamDetail(${d.id})">
+      <h4>${d.title}</h4>
+      <span class="dream-badge" style="background:${d.type.includes('上')?'rgba(76,175,80,0.2)':d.type.includes('中')?'rgba(255,213,79,0.2)':'rgba(239,83,80,0.2)'};color:${d.type.includes('上')?'#4caf50':d.type.includes('中')?'#ffd54f':'#ef5350'}">${d.type}</span>
+      <p>${d.desc.substring(0, 30)}...</p>
+    </div>
+  `).join('');
+}
+
+let allDreamsVisible = [];
+
+function filterDreams(cat, el) {
+  document.querySelectorAll('.dream-cat-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderDreams(cat === 'all' ? DREAM_DATA : DREAM_DATA.filter(d => d.cat === cat));
+}
+
+function searchDream() {
+  const q = document.getElementById('dreamSearch').value.trim();
+  if (!q) {
+    document.getElementById('dreamResult').classList.remove('show');
+    var activeCat = document.querySelector('.dream-cat-btn.active');
+    if (activeCat && activeCat.textContent.trim() !== '全部') {
+      var allBtn = document.querySelector('.dream-cat-btn');
+      if (allBtn) allBtn.click();
+    } else {
+      renderDreams(DREAM_DATA);
+    }
+    return;
+  }
+  var results = DREAM_DATA.filter(function(d) { return d.title.includes(q) || d.desc.includes(q); });
+  document.querySelectorAll('.dream-cat-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (results.length === 0) {
+    document.getElementById('dreamResult').innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:20px;">😴 未找到与 "<strong>' + q + '</strong>" 相关的梦境，试试其他关键词</p>';
+    document.getElementById('dreamResult').classList.add('show');
+    renderDreams(DREAM_DATA);
+  } else {
+    document.getElementById('dreamResult').innerHTML = '<p style="text-align:center;color:var(--gold);padding:8px;">找到 <strong>' + results.length + '</strong> 条结果</p>';
+    document.getElementById('dreamResult').classList.add('show');
+    renderDreams(results);
+  }
+}
+
+function showDreamDetail(id) {
+  const d = DREAM_DATA.find(x => x.id === id);
+  if (!d) return;
+  document.getElementById('dreamResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:12px;">
+      <span class="dream-badge" style="background:${d.type.includes('上')?'rgba(76,175,80,0.2)':d.type.includes('中')?'rgba(255,213,79,0.2)':'rgba(239,83,80,0.2)'};color:${d.type.includes('上')?'#4caf50':d.type.includes('中')?'#ffd54f':'#ef5350'}">${d.type}</span>
+      <h3 style="color:var(--gold);margin-top:8px;">${d.title}</h3>
+    </div>
+    <p style="color:var(--text-secondary);line-height:1.8;">${d.desc}</p>
+  `;
+  document.getElementById('dreamResult').classList.add('show');
+}
+
+// ========== Naming ==========
+function selectNamingGender(el, gender) {
+  document.querySelectorAll('#page-naming .chip-group:first-of-type .chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  namingGender = gender;
+}
+
+function selectNameLength(el, len) {
+  document.querySelectorAll('#page-naming #nameLengthGroup .chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  namingLength = len;
+}
+
+function startNaming() {
+  const surname = document.getElementById('nameSurname').value || '李';
+  const year = parseInt(document.getElementById('nameYear').value) || 2026;
+  const month = parseInt(document.getElementById('nameMonth').value) || 6;
+  const day = parseInt(document.getElementById('nameDay').value) || 15;
+  const hour = parseInt(document.getElementById('nameHour').value) || 7;
+  const avoidRaw = document.getElementById('nameAvoid').value.trim();
+  const generation = document.getElementById('nameGeneration').value.trim();
+  const lunar = getLunarDate(year, month, day);
+  const dayGan = TIAN_GAN.indexOf(lunar.ganzhiDay[0]);
+  const elements = ['木','木','火','火','土','土','金','金','水','水'];
+  const needElement = elements[(dayGan + 4) % 10];
+  const activeStyles = namingStyles.length > 0 ? namingStyles : ['儒雅'];
+  const avoidChars = avoidRaw ? avoidRaw.split('').filter(function(c){return c.trim()}) : [];
+  
+  // 按风格分类的字库
+  const styleChars = {
+    '诗意': { first: ['梓','楠','桐','宸','栩','樾','槿','檀','棠','林'], second: ['瑶','瑾','玥','珺','珞','琬','琦','琳','瑛','瑶'] },
+    '刚毅': { first: ['峰','峻','嵩','巍','岩','岭','峥','嵘','凯','毅'], second: ['强','刚','毅','恒','钧','铭','锐','锋','铮','鑫'] },
+    '儒雅': { first: ['文','彬','儒','翰','墨','书','礼','智','仁','谦'], second: ['雅','淑','慧','敏','静','婉','娴','瑾','瑜','瑶'] },
+    '清逸': { first: ['清','溪','涵','泽','润','泓','沐','沁','潇','瀚'], second: ['洁','澄','澈','澜','潼','渟','宁','静','怡','然'] },
+    '典雅': { first: ['典','嘉','懿','璟','曦','昊','晟','晞','曜','昱'], second: ['雅','韶','华','绮','萱','瑾','瑜','薇','莹','璐'] },
+    '温润': { first: ['温','润','泽','谦','和','安','宁','宥','容','宜'], second: ['婉','恬','纯','柔','惠','懿','嘉','琳','瑶','琪'] }
+  };
+  
+  const namePool = {
+    '木': [['梓','森','楠','楷','柏','桐','桦','枫','棠','栋','松','柳','棋','榄','柠','栩','樾','槿','檀'],
+           ['琳','瑶','琪','琦','瑾','瑜','璇','璐','瑞','琼','玥','莹','璟','璇','珂','珺','珞','琬','琰']],
+    '火': [['煜','炜','烁','炫','烨','焕','照','熙','熹','烈','然','灿','腾','耀','昕','旸','晖','昶','晟','晞'],
+           ['灵','烨','暖','晴','映','昭','晏','曦','曜','旻','昀','昉','昙','昕','昳','昵','晗','晟','晞','晶']],
+    '土': [['圣','坤','城','坚','坦','培','基','堂','堤','堡','岚','峥','嵘','岳','峰','峻','嵩','巍','岩','岭'],
+           ['岚','岩','峥','嵘','安','宇','宛','容','宜','宥','宸','宴','寄','寅','婉','婠','岫','峄','岐','岱']],
+    '金': [['钧','铭','锐','锋','锦','钟','锡','铠','铮','鑫','钊','钦','钧','钏','钢','钥','钜','钦','铿','铸'],
+           ['铃','钰','铄','锦','铮','锐','钧','铭','银','镜','銮','鑫','钊','钗','钿','钏','钥','铃','锦','钰']],
+    '水': [['泽','润','泓','瀚','浩','涵','潇','清','淇','沅','洛','泓','沐','沛','治','沁','沂','沃','沈','沐'],
+           ['溪','涵','澜','洁','沐','沁','沅','泓','润','澄','清','淇','滢','澍','澈','澜','潼','沐','渟','涵']]
+  };
+  
+  const pool = namePool[needElement] || namePool['木'];
+  const firstPool = pool[0];
+  const secondPool = pool[1];
+  
+  // Merge style-preferred chars into the pool (prioritize them)
+  var styleFirstCharSet = {};
+  var styleSecondCharSet = {};
+  activeStyles.forEach(function(s) {
+    var sc = styleChars[s];
+    if (sc) {
+      sc.first.forEach(function(c) { styleFirstCharSet[c] = true; });
+      sc.second.forEach(function(c) { styleSecondCharSet[c] = true; });
+    }
+  });
+  
+  // Weighted pool: style-preferred chars appear multiple times for higher probability
+  var weightedFirst = [];
+  var weightedSecond = [];
+  firstPool.forEach(function(c) {
+    if (avoidChars.indexOf(c) === -1) {
+      weightedFirst.push(c);
+      if (styleFirstCharSet[c]) { weightedFirst.push(c); weightedFirst.push(c); } // 3x weight
+    }
+  });
+  secondPool.forEach(function(c) {
+    if (avoidChars.indexOf(c) === -1) {
+      weightedSecond.push(c);
+      if (styleSecondCharSet[c]) { weightedSecond.push(c); weightedSecond.push(c); }
+    }
+  });
+  
+  // Fallback if all chars filtered out
+  if (weightedFirst.length === 0) { firstPool.forEach(function(c){weightedFirst.push(c);}); }
+  if (weightedSecond.length === 0) { secondPool.forEach(function(c){weightedSecond.push(c);}); }
+  
+  const meanings = {
+    '木': ['挺拔高洁','生机勃勃','坚韧不拔','欣欣向荣','正直磊落'],
+    '火': ['热情明亮','光芒四射','温暖人心','前程似锦','朝气蓬勃'],
+    '土': ['敦厚稳重','脚踏实地','厚德载物','安泰祥和','沉稳大气'],
+    '金': ['坚毅果敢','锐意进取','百折不挠','刚正不阿','坚如磐石'],
+    '水': ['灵动聪慧','上善若水','海纳百川','清透明澈','润物无声']
+  };
+  const styleMeanings = {
+    '诗意': '诗意盎然', '刚毅': '刚毅果敢', '儒雅': '温文儒雅',
+    '清逸': '清逸出尘', '典雅': '典雅高贵', '温润': '温润如玉'
+  };
+  
+  let results = [];
+  const count = namingLength === 2 ? 6 : 8;
+  const used = new Set();
+  
+  for (let i = 0; i < count * 5; i++) {
+    const first = weightedFirst[Math.floor(Math.random() * weightedFirst.length)];
+    const second = namingLength === 3 ? weightedSecond[Math.floor(Math.random() * weightedSecond.length)] : '';
+    const fullName = surname + first + second;
+    if (!used.has(fullName) && !avoidChars.some(function(a){return first===a||second===a})) {
+      used.add(fullName);
+      var styleTag = activeStyles.length > 0 ? ' · ' + activeStyles.map(function(s){return styleMeanings[s]||s}).join('/') : '';
+      results.push({
+        name: fullName,
+        meaning: (meanings[needElement] || ['福慧双修'])[Math.floor(Math.random()*5)] + styleTag,
+        detail: '五行补' + needElement + ' · 风格: ' + activeStyles.join('/')
+      });
+    }
+    if (results.length >= count) break;
+  }
+  
+  var genHtml = generation ? '<p style="color:var(--text-muted);font-size:13px;margin-bottom:12px;">辈分字：' + generation + '</p>' : '';
+  var avoidHtml = avoidRaw ? '<p style="color:var(--text-muted);font-size:12px;margin-bottom:8px;">已避开：' + avoidRaw + '</p>' : '';
+  
+  document.getElementById('namingResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:14px;color:var(--gold);font-family:'Noto Serif SC',serif;">推荐名字</div>
+      <div style="color:var(--text-muted);font-size:13px;">八字喜${needElement} · ${namingLength}字名${activeStyles.length > 0 ? ' · ' + activeStyles.join('/') : ''}</div>
+    </div>
+    ${genHtml}${avoidHtml}
+    <div class="name-result">
+      ${results.map(function(r) { return `
+        <div class="name-card">
+          <div class="name">${r.name}</div>
+          <div class="name-meaning">${r.meaning}</div>
+          <div class="name-detail">${r.detail}</div>
+        </div>
+      `;}).join('')}
+    </div>
+    <div style="color:var(--text-muted);font-size:12px;text-align:center;margin-top:16px;">
+      💡 仅作传统文化参考，最终请以实际情况判断
+    </div>
+  `;
+  document.getElementById('namingResult').classList.add('show');
+}
+// ========== I Ching ==========
+function selectIchingMaster(el, name) {
+  document.querySelectorAll('#ichingMasterSelect .master-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  currentIchingMaster = name;
+}
+
+const HEXAGRAMS = [
+  { name:'乾为天', symbol:'䷀', desc:'刚健不息，天道运行。', gua:'乾上乾下' },
+  { name:'坤为地', symbol:'䷁', desc:'厚德载物，包容万物。', gua:'坤上坤下' },
+  { name:'水雷屯', symbol:'䷂', desc:'创始之艰，宜守正固。', gua:'坎上震下' },
+  { name:'山水蒙', symbol:'䷃', desc:'启蒙发智，童蒙求我。', gua:'艮上坎下' },
+  { name:'水天需', symbol:'䷄', desc:'等待时机，诚信则吉。', gua:'坎上乾下' },
+  { name:'天水讼', symbol:'䷅', desc:'争讼不利，和解为贵。', gua:'乾上坎下' },
+  { name:'地水师', symbol:'䷆', desc:'统率之象，师出有名。', gua:'坤上坎下' },
+  { name:'水地比', symbol:'䷇', desc:'亲附团结，众人相助。', gua:'坎上坤下' },
+  { name:'风天小畜', symbol:'䷈', desc:'蓄积力量，小成之象。', gua:'巽上乾下' },
+  { name:'天泽履', symbol:'䷉', desc:'履行礼仪，小心谨慎。', gua:'乾上兑下' },
+  { name:'地天泰', symbol:'䷊', desc:'阴阳和合，万事亨通。', gua:'坤上乾下' },
+  { name:'天地否', symbol:'䷋', desc:'闭塞不通，宜守不宜行。', gua:'乾上坤下' },
+  { name:'天火同人', symbol:'䷌', desc:'同心合力，与人合作。', gua:'乾上离下' },
+  { name:'火天大有', symbol:'䷍', desc:'大获所有，丰收之象。', gua:'离上乾下' },
+  { name:'地山谦', symbol:'䷎', desc:'谦虚受益，满招损。', gua:'坤上艮下' },
+  { name:'雷地豫', symbol:'䷏', desc:'愉悦安乐，从容准备。', gua:'震上坤下' }
+];
+
+function castIching() {
+  const question = document.getElementById('ichingQuestion').value || '未填写具体事项';
+  const lines = [];
+  let changeLines = [];
+  for (let i = 0; i < 6; i++) {
+    const coins = [Math.random() < 0.5, Math.random() < 0.5, Math.random() < 0.5];
+    const heads = coins.filter(Boolean).length;
+    const value = heads === 0 ? 6 : heads === 3 ? 9 : heads === 1 ? 8 : 7;
+    lines.push(value);
+    if (value === 6 || value === 9) changeLines.push(i);
+  }
+  const hexIdx = (lines.filter(l => l % 2 === 1).length * 7 + lines.filter(l => l % 2 === 0).length * 3) % 16;
+  const hexagram = HEXAGRAMS[hexIdx];
+  const changeLine = changeLines.length > 0 ? changeLines[0] : -1;
+  const lineNames = ['初爻','二爻','三爻','四爻','五爻','上爻'];
+  
+  let masterWords = '';
+  switch(currentIchingMaster) {
+    case '慧明长老': masterWords = `此卦${hexagram.name}，${hexagram.desc}。卦象${hexagram.gua}。${changeLine >= 0 ? `${lineNames[changeLine]}动，变在其中。` : '六爻不动，静观其变。'}所问之事，根基已显，宜顺天时而动。`; break;
+    case '明心师父': masterWords = `阿弥陀佛。得${hexagram.name}一卦，${hexagram.desc}。心诚则卦明，卦明则事见。施主放宽心，慈悲为怀，自有福报。`; break;
+    case '玄真道长': masterWords = `${hexagram.name}卦！${hexagram.desc}简单说就是${['别急，等两天','直接冲','稳着点','找个人帮忙','别硬来','没毛病'][hexIdx % 6]}。信不信由你，我就说大白话。`; break;
+  }
+  
+  document.getElementById('ichingResult').innerHTML = `
+    <div style="text-align:center;margin-bottom:16px;">
+      <div style="font-size:14px;color:var(--text-muted);margin-bottom:8px;">您问：${question}</div>
+      <div style="font-size:48px;margin:8px 0;">${hexagram.symbol}</div>
+      <div style="font-size:22px;color:var(--gold);font-family:'Noto Serif SC',serif;">${hexagram.name}</div>
+      <div style="color:var(--text-muted);font-size:13px;">${hexagram.gua}</div>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:16px;">
+      <div style="margin-bottom:12px;">
+        ${lines.map((l, i) => `
+          <div class="yao-line">
+            <span class="yao-position">${lineNames[5-i]}</span>
+            <span class="yao-symbol ${l % 2 === 1 ? 'yao-yang' : 'yao-yin'}">${l % 2 === 1 ? '━━━━━' : '━ ━━'}</span>
+            <span style="color:var(--text-muted);font-size:11px;">${l === 6 ? '⚡变' : l === 9 ? '⚡变' : ''}</span>
+          </div>
+        `).join('')}
+      </div>
+      <p style="color:var(--gold);margin-bottom:8px;"><strong>🙏 ${currentIchingMaster} 开示：</strong></p>
+      <p style="color:var(--text-secondary);">${masterWords}</p>
+      <p style="color:var(--text-muted);margin-top:12px;font-style:italic;">${hexagram.desc}</p>
+    </div>
+  `;
+  document.getElementById('ichingResult').classList.add('show');
+}
+
+// ========== Meditation ==========
+function startMeditation() {
+  if (meditationRunning) {
+    clearInterval(meditationTimer);
+    meditationRunning = false;
+    document.getElementById('medStartBtn').textContent = '继续禅坐';
+    document.getElementById('medStatus').textContent = '已暂停';
+    return;
+  }
+  meditationRunning = true;
+  document.getElementById('medStartBtn').textContent = '⏸ 暂停';
+  document.getElementById('medStatus').textContent = '🧘 静心禅坐中...';
+  meditationTimer = setInterval(() => {
+    meditationSeconds++;
+    const m = String(Math.floor(meditationSeconds / 60)).padStart(2, '0');
+    const s = String(meditationSeconds % 60).padStart(2, '0');
+    document.getElementById('medTimer').textContent = `${m}:${s}`;
+    const symbol = document.getElementById('medSymbol');
+    const breathe = Math.sin(meditationSeconds * 0.1) * 0.15 + 0.35;
+    symbol.style.opacity = breathe;
+    symbol.style.transform = `scale(${1 + Math.sin(meditationSeconds * 0.1) * 0.1})`;
+  }, 1000);
+}
+
+function resetMeditation() {
+  clearInterval(meditationTimer);
+  meditationRunning = false;
+  meditationSeconds = 0;
+  document.getElementById('medTimer').textContent = '00:00';
+  document.getElementById('medStartBtn').textContent = '开始禅坐';
+  document.getElementById('medStatus').textContent = '点击开始，静心禅坐';
+  document.getElementById('medSymbol').style.opacity = '0.3';
+  document.getElementById('medSymbol').style.transform = 'scale(1)';
+}
+// ========== Incense ==========
+function burnIncense() {
+  const container = document.getElementById('incenseContainer');
+  const sticks = container.querySelectorAll('.incense-stick');
+  if (sticks.length >= 3) return;
+  const div = document.createElement('div');
+  div.style.display = 'inline-block';
+  div.style.margin = '0 10px';
+  div.style.position = 'relative';
+  div.innerHTML = `
+    <div class="incense-stick" style="animation:glow 2s infinite ${sticks.length * 0.3}s;">
+      <div class="incense-smoke" style="animation-delay:${sticks.length * 0.5}s;"></div>
+      <div class="incense-smoke" style="animation-delay:${sticks.length * 0.5 + 1}s;left:60%;"></div>
+    </div>
+  `;
+  container.appendChild(div);
+  setTimeout(() => { if (div.parentNode) div.remove(); }, 8000);
+}
+
+// ========== Wish / Lamps ==========
+function loadLamps() {
+  const saved = localStorage.getItem('putiyuan_lamps');
+  lampData = saved ? JSON.parse(saved) : [];
+  renderLamps();
+  const count = document.getElementById('lampCount');
+  if (count) count.textContent = 46 + lampData.length;
+}
+
+function renderLamps() {
+  const wall = document.getElementById('lampWall');
+  if (!wall) return;
+  // Desensitize: keep first 1 char + ** for display
+  var desensitize = function(name) {
+    if (!name || name.length <= 1) return name ? name[0] + '**' : '**';
+    return name[0] + '**';
+  };
+  const allLamps = lampData.concat([
+    {from:'1**', to:'w**', type:'智慧灯'},
+    {from:'善**', to:'赵**', type:'长寿灯'},
+    {from:'善**', to:'杜**', type:'平安灯'},
+    {from:'善**', to:'刘**', type:'姻缘灯'},
+    {from:'善**', to:'林**', type:'智慧灯'},
+  ]);
+  wall.innerHTML = allLamps.slice(0, 20).map(function(l) { return `
+    <div class="lamp-item">
+      <div class="lamp-icon">🪔</div>
+      <div class="lamp-from">${desensitize(l.from)}</div>
+      <div class="lamp-to">为 ${desensitize(l.to)}</div>
+      <div class="lamp-type">${l.type}</div>
+    </div>
+  `;}).join('');
+}
+
+function lightLamp() {
+  const name = document.getElementById('wishName').value.trim();
+  const relation = document.getElementById('wishRelation').value;
+  const sender = document.getElementById('wishSender').value.trim() || '善**';
+  const msg = document.getElementById('wishMessage').value.trim();
+  if (!name) { alert('请填写家人姓名'); return; }
+  lampData.push({ from: sender, to: name, type: selectedLampType, relation, msg, time: new Date().toISOString() });
+  localStorage.setItem('putiyuan_lamps', JSON.stringify(lampData));
+  renderLamps();
+  document.getElementById('lampCount').textContent = 46 + lampData.length;
+  alert(`🪔 ${selectedLampType}已为您点亮！\n供奉时长：${selectedDuration}\n供奉金额：¥${selectedPrice}\n\n此功能为传统文化仪式展示。实际供奉请联系管理员。`);
+}
+
+// ========== Misc ==========
+function toggleMusic() {
+  alert('🧘 禅修音乐功能\n\n包含：钟磬古乐、佛号梵音、深山溪水\n\n可播放自然白噪音帮助静心禅坐。');
+}
+
+function shareSite() {
+  if (navigator.share) {
+    navigator.share({ title: '菩提苑', text: '为家人祈福求灵签', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('链接已复制，可分享给好友'));
+  }
+}
+
+// ========== Init ==========
+const domReady = () => {
+  document.querySelectorAll('#lampTypeGroup .chip').forEach(c => {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('#lampTypeGroup .chip').forEach(x => x.classList.remove('selected'));
+      this.classList.add('selected');
+      selectedLampType = this.dataset.type;
+    });
+  });
+  document.querySelectorAll('#lampDurationGroup .chip').forEach(c => {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('#lampDurationGroup .chip').forEach(x => x.classList.remove('selected'));
+      this.classList.add('selected');
+      selectedDuration = this.dataset.duration;
+      selectedPrice = parseFloat(this.dataset.price);
+      document.getElementById('wishPrice').textContent = '¥' + selectedPrice;
+    });
+  });
+  loadData();
+};
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', domReady);
+} else {
+  domReady();
+}
+
+// Check all functions exist
+(function(){
+  var funcs=["analyzeBazi","drawQian","startNaming","castIching","startMeditation","burnIncense","lightLamp","searchDream","changeDay","toggleNav","toggleMusic","shareSite","drawQian","selectMaster","selectBaziMaster","selectGender","selectNamingGender","selectNameLength","selectIchingMaster","filterDreams","showDreamDetail"];
+  var missing=funcs.filter(function(f){return typeof window[f]==="undefined"});
+  var d=document.getElementById("jserr");
+  if(d){
+    if(missing.length===0){
+      d.textContent="All "+funcs.length+" functions OK";
+      d.style.background="green";
+    } else {
+      d.textContent="MISSING: "+missing.join(", ");
+      d.style.background="orange";
+    }
+  }
+})();
+
+// ========== Particles ==========
+(function() {
+  var container = document.getElementById('particles');
+  if (!container) return;
+  var positions = [[12,20],[32,65],[55,38],[72,72],[85,28],[20,82],[42,15],[68,45],[30,50],[78,12]];
+  var delays = [0,1.2,2.4,0.8,3.1,2.0,0.5,1.8,2.9,1.5];
+  for (var i = 0; i < positions.length; i++) {
+    var dot = document.createElement('span');
+    dot.className = 'particle';
+    dot.style.cssText = 'left:' + positions[i][0] + '%;top:' + positions[i][1] + '%;animation-delay:' + delays[i] + 's';
+    container.appendChild(dot);
+  }
+})();
+
+// ========== Fade-in on scroll ==========
+(function() {
+  if (!window.IntersectionObserver) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.feature-card, .why-item, .section-title, .incense-section').forEach(function(el) {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+})();
+
+// ========== Banner scroll shadow ==========
+window.addEventListener('scroll', function() {
+  var banner = document.querySelector('.banner');
+  if (!banner) return;
+  if (window.scrollY > 10) banner.classList.add('scrolled');
+  else banner.classList.remove('scrolled');
+});
+
+</script>
+</body>
+</html>
