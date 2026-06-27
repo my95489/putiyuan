@@ -41,7 +41,7 @@
 
 <header class="banner">
   <div class="banner-inner">
-    <div class="logo">
+    <div class="logo" onclick="navigate('home')" style="cursor:pointer;">
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M32 6 C 22 6, 12 12, 10 22 C 8 32, 14 44, 24 50 C 28 53, 30 56, 31 60 L 32 62 L 33 60 C 34 56, 36 53, 40 50 C 50 44, 56 32, 54 22 C 52 12, 42 6, 32 6 Z" fill="currentColor" fill-opacity="0.12"/>
         <path d="M32 8 V 60" stroke-width="1.4"/>
@@ -52,7 +52,7 @@
         <path d="M32 42 C 28 46, 26 50, 26 54"/>
         <path d="M32 42 C 36 46, 38 50, 38 54"/>
       </svg>
-      <span class="logo-text" onclick="navigate('home')" style="cursor:pointer;">菩提苑</span>
+      <span class="logo-text">菩提苑</span>
     </div>
     <button class="nav-toggle" onclick="toggleNav()">☰</button>
     <nav class="banner-nav" id="mainNav">
