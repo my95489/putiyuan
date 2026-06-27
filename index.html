@@ -177,11 +177,81 @@
     </div>
   </div>
 
-  <div class="incense-section" id="incenseSection">
+  <!-- ===== 在线上香 (Temple Style) ===== -->
+  <div class="incense-section" id="incenseSection" style="padding:30px 20px;">
     <h2>🙏 在线上香</h2>
-    <p>敬上一炷清香，祈愿平安吉祥</p>
-    <div class="incense-container" id="incenseContainer"></div>
-    <button class="incense-btn" onclick="burnIncense()">敬上一炷清香</button>
+    <p style="margin-bottom:6px;">心诚则灵，每日最多三礼，每礼三炷清香。</p>
+    
+    <!-- Incense Burner SVG -->
+    <div class="incense-burner" style="position:relative;width:280px;height:340px;margin:0 auto 16px;">
+      <svg viewBox="0 0 320 400" width="280" height="340" style="display:block;margin:0 auto;">
+        <defs>
+          <linearGradient id="bronzeBody" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#5a3818"/><stop offset="15%" stop-color="#a87142"/>
+            <stop offset="40%" stop-color="#d4a464"/><stop offset="55%" stop-color="#a87142"/>
+            <stop offset="80%" stop-color="#6b3f1c"/><stop offset="100%" stop-color="#3a2310"/>
+          </linearGradient>
+          <linearGradient id="goldRim" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fde68a"/><stop offset="50%" stop-color="#c9a05c"/><stop offset="100%" stop-color="#7c4f1a"/>
+          </linearGradient>
+          <radialGradient id="ashGrad" cx="50%" cy="30%">
+            <stop offset="0%" stop-color="#d4cabc"/><stop offset="60%" stop-color="#8d8473"/><stop offset="100%" stop-color="#3a3528"/>
+          </radialGradient>
+          <linearGradient id="stickGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff5d8"/><stop offset="5%" stop-color="#ffb88c"/>
+            <stop offset="12%" stop-color="#a8632d"/><stop offset="100%" stop-color="#6b3f1c"/>
+          </linearGradient>
+          <radialGradient id="ember">
+            <stop offset="0%" stop-color="#fff"/><stop offset="30%" stop-color="#ffe98c"/>
+            <stop offset="60%" stop-color="#ff7e2a"/><stop offset="100%" stop-color="#ff4500" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- Shadow -->
+        <ellipse cx="160" cy="385" rx="100" ry="8" fill="rgba(0,0,0,0.5)"/>
+        <!-- Burner body -->
+        <path d="M 80 230 Q 80 350 100 370 L 220 370 Q 240 350 240 230 Z" fill="url(#bronzeBody)" stroke="#3a2310" stroke-width="1.2"/>
+        <!-- Rim -->
+        <rect x="75" y="225" width="170" height="12" rx="3" fill="url(#goldRim)" stroke="#3a2310" stroke-width="1"/>
+        <!-- Ash -->
+        <ellipse cx="160" cy="238" rx="75" ry="8" fill="url(#ashGrad)"/>
+        <!-- Left handle -->
+        <path d="M 70 240 Q 55 250 55 270 Q 55 290 70 300 L 82 292 Q 74 284 74 270 Q 74 256 82 248 Z" fill="url(#bronzeBody)" stroke="#3a2310" stroke-width="1"/>
+        <!-- Right handle -->
+        <path d="M 250 240 Q 265 250 265 270 Q 265 290 250 300 L 238 292 Q 246 284 246 270 Q 246 256 238 248 Z" fill="url(#bronzeBody)" stroke="#3a2310" stroke-width="1"/>
+        <!-- 福 character -->
+        <rect x="138" y="300" width="44" height="44" rx="4" fill="#8b2500" stroke="#fcd34d" stroke-width="2"/>
+        <text x="160" y="330" text-anchor="middle" font-size="30" font-family="serif" font-weight="bold" fill="#fcd34d">福</text>
+        
+        <!-- Incense sticks (dynamically shown by JS) -->
+        <g id="stick1" opacity="0"><line x1="0" y1="0" x2="0" y2="-130" stroke="url(#stickGrad)" stroke-width="4" stroke-linecap="round"/></g>
+        <g id="stick1glow" opacity="0"><circle cx="0" cy="-133" r="6" fill="url(#ember)"/></g>
+        <g id="stick2" opacity="0"><line x1="0" y1="0" x2="0" y2="-130" stroke="url(#stickGrad)" stroke-width="4" stroke-linecap="round"/></g>
+        <g id="stick2glow" opacity="0"><circle cx="0" cy="-133" r="6" fill="url(#ember)"/></g>
+        <g id="stick3" opacity="0"><line x1="0" y1="0" x2="0" y2="-130" stroke="url(#stickGrad)" stroke-width="4" stroke-linecap="round"/></g>
+        <g id="stick3glow" opacity="0"><circle cx="0" cy="-133" r="6" fill="url(#ember)"/></g>
+        
+        <!-- Smoke particles -->
+        <g id="smokeGroup" opacity="0">
+          <circle r="4" fill="rgba(200,180,150,0.15)"><animate attributeName="cy" values="-140;-220" dur="3s" repeatCount="indefinite"/><animate attributeName="cx" values="-8;12" dur="3s" repeatCount="indefinite"/><animate attributeName="r" values="4;12" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0" dur="3s" repeatCount="indefinite"/></circle>
+          <circle r="4" fill="rgba(200,180,150,0.15)"><animate attributeName="cy" values="-140;-230" dur="3.5s" repeatCount="indefinite"/><animate attributeName="cx" values="8;-10" dur="3.5s" repeatCount="indefinite"/><animate attributeName="r" values="3;14" dur="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="3.5s" repeatCount="indefinite"/></circle>
+          <circle r="3" fill="rgba(200,180,150,0.1)"><animate attributeName="cy" values="-140;-200" dur="4s" repeatCount="indefinite"/><animate attributeName="cx" values="0;5" dur="4s" repeatCount="indefinite"/><animate attributeName="r" values="3;10" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="4s" repeatCount="indefinite"/></circle>
+        </g>
+      </svg>
+      
+      <!-- Badges -->
+      <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:100%;display:flex;justify-content:space-between;padding:0 8px;">
+        <span style="border-radius:20px;border:1px solid var(--border-gold);background:rgba(0,0,0,0.7);padding:4px 12px;font-size:11px;color:var(--gold);letter-spacing:2px;">三礼九炷</span>
+        <span style="border-radius:20px;border:1px solid var(--border-gold);background:rgba(0,0,0,0.7);padding:4px 12px;font-size:12px;color:var(--paper-dark);"><span id="incenseCount">0</span>/3 礼</span>
+      </div>
+      <div style="position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--paper-muted);opacity:0.65;white-space:nowrap;">轻触下方按钮，敬上 3 炷清香</div>
+    </div>
+    
+    <button class="incense-btn" onclick="burnIncense()" style="margin-bottom:8px;">🔥 敬上三炷清香</button>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button class="chip selected" id="incenseType1" onclick="selectIncenseType(this,1)" style="font-size:13px;">檀香</button>
+      <button class="chip" id="incenseType2" onclick="selectIncenseType(this,2)" style="font-size:13px;">沉香</button>
+      <button class="chip" id="incenseType3" onclick="selectIncenseType(this,3)" style="font-size:13px;">安神香</button>
+    </div>
   </div>
 
   <div class="share-section">
@@ -1190,23 +1260,46 @@ function resetMeditation() {
   document.getElementById('medSymbol').style.opacity = '0.3';
   document.getElementById('medSymbol').style.transform = 'scale(1)';
 }
-// ========== Incense ==========
+// ========== Incense (Temple Style) ==========
+var incenseRiteCount = 0;
+function selectIncenseType(el, id) {
+  document.querySelectorAll('#incenseSection .chip').forEach(function(b) { b.classList.remove('selected'); });
+  el.classList.add('selected');
+}
 function burnIncense() {
-  const container = document.getElementById('incenseContainer');
-  const sticks = container.querySelectorAll('.incense-stick');
-  if (sticks.length >= 3) return;
-  const div = document.createElement('div');
-  div.style.display = 'inline-block';
-  div.style.margin = '0 10px';
-  div.style.position = 'relative';
-  div.innerHTML = `
-    <div class="incense-stick" style="animation:glow 2s infinite ${sticks.length * 0.3}s;">
-      <div class="incense-smoke" style="animation-delay:${sticks.length * 0.5}s;"></div>
-      <div class="incense-smoke" style="animation-delay:${sticks.length * 0.5 + 1}s;left:60%;"></div>
-    </div>
-  `;
-  container.appendChild(div);
-  setTimeout(() => { if (div.parentNode) div.remove(); }, 8000);
+  if (incenseRiteCount >= 3) { alert('🙏 今日已奉三礼，明日再来。心诚则灵，贵在持之以恒。'); return; }
+  incenseRiteCount++;
+  document.getElementById('incenseCount').textContent = incenseRiteCount;
+  // Animate sticks
+  var positions = [
+    {x: 128 + 16 * (incenseRiteCount - 1), y: 236},
+    {x: 148 + 16 * (incenseRiteCount - 1), y: 235},
+    {x: 168 + 16 * (incenseRiteCount - 1), y: 236}
+  ];
+  // Use the SVG viewBox coordinates
+  var svgSticks = [document.getElementById('stick1'), document.getElementById('stick2'), document.getElementById('stick3')];
+  var svgGlows = [document.getElementById('stick1glow'), document.getElementById('stick2glow'), document.getElementById('stick3glow')];
+  var svgSmoke = document.getElementById('smokeGroup');
+  
+  for (var i = 0; i < 3; i++) {
+    if (svgSticks[i]) {
+      var pos = positions[i];
+      svgSticks[i].setAttribute('transform', 'translate(' + pos.x + ',' + pos.y + ')');
+      svgSticks[i].setAttribute('opacity', '0.9');
+    }
+    if (svgGlows[i]) {
+      svgGlows[i].setAttribute('transform', 'translate(' + positions[i].x + ',' + (positions[i].y - 131) + ')');
+      svgGlows[i].setAttribute('opacity', '1');
+    }
+  }
+  if (svgSmoke) svgSmoke.setAttribute('opacity', '1');
+  
+  // Show success message
+  if (incenseRiteCount >= 3) {
+    setTimeout(function() { alert('🙏 三礼圆满！功德无量。'); }, 500);
+  } else {
+    alert('🙏 已奉上三炷清香。还余 ' + (3 - incenseRiteCount) + ' 礼。');
+  }
 }
 
 // ========== Wish / Lamps ==========
