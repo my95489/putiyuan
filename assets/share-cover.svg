@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0a0604"/>
+  <circle cx="600" cy="315" r="120" fill="none" stroke="#c9a05c" stroke-width="2" opacity="0.3"/>
+  <circle cx="600" cy="315" r="80" fill="none" stroke="#c9a05c" stroke-width="1.5" opacity="0.5"/>
+  <path d="M600 200 C 580 200, 540 220, 520 260 C 500 300, 520 340, 560 370 C 580 385, 590 400, 595 420 L 600 430 L 605 420 C 610 400, 620 385, 640 370 C 680 340, 700 300, 680 260 C 660 220, 620 200, 600 200 Z" fill="#c9a05c" fill-opacity="0.15" stroke="#c9a05c" stroke-width="2"/>
+  <path d="M600 215 L 600 420" stroke="#c9a05c" stroke-width="1.5"/>
+  <path d="M600 240 C 580 245, 560 255, 540 270" stroke="#c9a05c" stroke-width="1" opacity="0.7"/>
+  <path d="M600 240 C 620 245, 640 255, 660 270" stroke="#c9a05c" stroke-width="1" opacity="0.7"/>
+  <text x="600" y="500" text-anchor="middle" font-family="serif" font-size="52" fill="#c9a05c" letter-spacing="10">菩提苑</text>
+  <text x="600" y="545" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#8a7a5a" letter-spacing="4">为家人祈福 · 求灵签</text>
+</svg>
