@@ -1177,10 +1177,24 @@ function toggleMusic() {
 }
 
 function shareSite() {
+  var url = window.location.href;
   if (navigator.share) {
-    navigator.share({ title: '菩提苑', text: '为家人祈福求灵签', url: window.location.href });
+    navigator.share({ title: '菩提苑', text: '为家人祈福求灵签', url: url }).catch(function(){});
   } else {
-    navigator.clipboard.writeText(window.location.href).then(() => alert('链接已复制，可分享给好友'));
+    // Fallback: prompt user to copy
+    var textarea = document.createElement('textarea');
+    textarea.value = url;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      alert('✅ 链接已复制：' + url);
+    } catch(e) {
+      prompt('📋 请复制下面的链接分享给好友：', url);
+    }
+    document.body.removeChild(textarea);
   }
 }
 
