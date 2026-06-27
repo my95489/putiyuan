@@ -533,6 +533,30 @@ select.form-select {
 .lamp-wall { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
 .price-tag { font-size: 18px; color: var(--gold); font-weight: 700; }
 
+/* ===== Modal ===== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.75);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.show { display: flex; }
+.modal-box {
+  background: var(--xuan-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  max-width: 420px; width: 100%;
+  max-height: 90vh; overflow-y: auto;
+  animation: fade-up 0.3s ease;
+}
+.modal-box h2 { color: var(--gold); font-family: 'Noto Serif SC', serif; }
+.modal-close {
+  float: right; background: none; border: none;
+  color: var(--paper-muted); font-size: 20px; cursor: pointer;
+  line-height: 1;
+}
+
 /* ===== Incense Animation ===== */
 .incense-container { text-align: center; margin-bottom: 16px; }
 .incense-stick {
