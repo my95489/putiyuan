@@ -1175,10 +1175,17 @@ function loadLamps() {
 function renderLamps() {
   const wall = document.getElementById('lampWall');
   if (!wall) return;
-  // Desensitize: keep first 1 char + ** for display
   var desensitize = function(name) {
     if (!name || name.length <= 1) return name ? name[0] + '**' : '**';
     return name[0] + '**';
+  };
+  var lampIcons = {
+    '清心灯': {color:'#4fc3f7', emoji:'🕊'},
+    '智慧灯': {color:'#ffd54f', emoji:'📚'},
+    '长寿灯': {color:'#66bb6a', emoji:'🌿'},
+    '平安灯': {color:'#ef5350', emoji:'🛡'},
+    '姻缘灯': {color:'#ec407a', emoji:'❤'},
+    '财福灯': {color:'#ffa726', emoji:'💰'}
   };
   const allLamps = lampData.concat([
     {from:'1**', to:'w**', type:'智慧灯'},
@@ -1186,15 +1193,35 @@ function renderLamps() {
     {from:'善**', to:'杜**', type:'平安灯'},
     {from:'善**', to:'刘**', type:'姻缘灯'},
     {from:'善**', to:'林**', type:'智慧灯'},
+    {from:'善**', to:'杨**', type:'平安灯'},
+    {from:'善**', to:'邓**', type:'长寿灯'},
+    {from:'善**', to:'王**', type:'智慧灯'},
+    {from:'Z**', to:'Z**', type:'平安灯'},
+    {from:'善**', to:'张**', type:'智慧灯'},
+    {from:'善**', to:'朱**', type:'平安灯'},
+    {from:'善**', to:'王**', type:'长寿灯'},
   ]);
-  wall.innerHTML = allLamps.slice(0, 20).map(function(l) { return `
-    <div class="lamp-item">
-      <div class="lamp-icon">🪔</div>
-      <div class="lamp-from">${desensitize(l.from)}</div>
-      <div class="lamp-to">为 ${desensitize(l.to)}</div>
-      <div class="lamp-type">${l.type}</div>
-    </div>
-  `;}).join('');
+  
+  wall.innerHTML = allLamps.map(function(l) {
+    var li = lampIcons[l.type] || lampIcons['平安灯'];
+    var from = desensitize(l.from);
+    var to = desensitize(l.to);
+    var initial = to.replace('*', '').charAt(0) || '福';
+    return '<div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:rgba(26,18,12,0.4);border-radius:8px;border:1px solid var(--border-gold);">' +
+      '<svg width="28" height="32" viewBox="0 0 28 32" style="flex-shrink:0;">' +
+        '<ellipse cx="14" cy="18" rx="11" ry="13" fill="' + li.color + '" fill-opacity="0.15" stroke="' + li.color + '" stroke-width="1.2" stroke-opacity="0.6"/>' +
+        '<rect x="10" y="3" width="8" height="2" rx="1" fill="' + li.color + '" opacity="0.6"/>' +
+        '<line x1="14" y1="5" x2="14" y2="7" stroke="' + li.color + '" stroke-width="0.8" opacity="0.4"/>' +
+        '<text x="14" y="21" text-anchor="middle" font-size="12" fill="' + li.color + '" font-family="serif">' + initial + '</text>' +
+        '<line x1="6" y1="30" x2="22" y2="30" stroke="' + li.color + '" stroke-width="0.5" opacity="0.3"/>' +
+        '<line x1="4" y1="31" x2="24" y2="31" stroke="' + li.color + '" stroke-width="0.5" opacity="0.3"/>' +
+      '</svg>' +
+      '<div style="flex:1;min-width:0;">' +
+        '<div style="font-size:13px;color:var(--paper);"><span style="color:var(--gold);">' + from + '</span> 为 <span style="color:var(--gold);">' + to + '</span></div>' +
+        '<div style="font-size:11px;color:var(--paper-muted);margin-top:1px;">敬奉 · ' + l.type + '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
 }
 
 function lightLamp() {

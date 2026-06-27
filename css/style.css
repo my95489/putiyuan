@@ -530,13 +530,7 @@ select.form-select {
 #medStatus { color: var(--paper-muted); font-size: 14px; margin-bottom: 20px; }
 
 /* ===== Lamp Wall ===== */
-.lamp-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; margin-top: 16px; }
-.lamp-item { background: rgba(26,18,12,0.5); border: 1px solid var(--border-gold); border-radius: var(--radius-sm); padding: 10px; text-align: center; transition: all 0.2s; }
-.lamp-item:hover { border-color: rgba(201,160,94,0.4); }
-.lamp-item .lamp-icon { font-size: 24px; }
-.lamp-item .lamp-from { color: var(--paper-muted); font-size: 11px; }
-.lamp-item .lamp-to { color: var(--gold); font-size: 12px; }
-.lamp-item .lamp-type { color: var(--paper-muted); font-size: 11px; }
+.lamp-wall { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
 .price-tag { font-size: 18px; color: var(--gold); font-weight: 700; }
 
 /* ===== Incense Animation ===== */
