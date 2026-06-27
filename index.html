@@ -1284,7 +1284,6 @@ function lightLamp() {
   document.getElementById('payLampType').textContent = selectedLampType;
   document.getElementById('payDuration').textContent = selectedDuration;
   document.getElementById('payPrice').textContent = '¥' + selectedPrice;
-  document.getElementById('paySender').textContent = sender;
   overlay.classList.add('show');
   // Save data for after payment
   window._pendingLamp = { from: sender, to: name, type: selectedLampType, relation: relation, msg: msg };
